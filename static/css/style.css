@@ -1,0 +1,19 @@
+  body {
+      padding-top: 25px;
+      padding-bottom: 0px;
+      font-family:"Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif
+  }
+
+  #post{
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+#post p,li{
+      font-size: 14px;
+      line-height: 26px;;
+}
+
+
+.label {
+    display: inline-block;
+}

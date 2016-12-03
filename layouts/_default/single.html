@@ -1,0 +1,81 @@
+{{ partial "header.html" }}
+<header class="navbar navbar-default navbar-fixed-top" id="top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ .Site.BaseURL }}/">{{ .Site.Title }}</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+	{{ range where .Site.Pages "Section" "!=" "post" }}
+	<li><a href="{{.Permalink}}">{{.Title}}</a></li>
+{{ end }}
+      </ul>
+  </div>
+</nav>
+</header>
+<div class="jumbotron masthead" role="main">
+	<div class="row">
+	  <div class="col-md-8 col-md-offset-2">
+	    <div class="container ">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div id="post" >
+{{ if eq .Section "post" }}
+	<p><h2> {{ .Title }} </h2>
+	  <small class="text-muted">
+	    发表于&nbsp;<time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }} </time>
+	  </small>
+	</p>
+
+	<p>
+	  
+	  <a href='/'><span class="label label-danger"></span></a>
+
+	</p>
+	<hr/>
+{{ end }}
+	{{ .Content }}
+	{{ if eq .Section "post" }}
+
+											  <p>
+
+											  {{ range .Params.tags }}
+											    <span > <a href="/tags/{{ . | urlize }}">{{ . }}</a> </span>
+
+											    {{end}}
+											    </p>
+											  
+
+{{ end }}
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="{{ .Date.Format "%Y/%m/%d" }}/{{ .Title }}/" data-title="{{.Title}}" data-url=""></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"heyuanfei"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+							    </div>
+  </div>
+
+</div>
+
+      	    </div>
+	  </div>
+	</div>
+      </div>
+{{ partial "footer.html"}}
