@@ -42,17 +42,8 @@
 {{ end }}
 	{{ .Content }}
 	{{ if eq .Section "post" }}
-
-											  <p>
-
-											  {{ range .Params.tags }}
-											    <span > <a href="/tags/{{ . | urlize }}">{{ . }}</a> </span>
-
-											    {{end}}
-											    </p>
-											  
-
-{{ end }}
+	      {{ partial "post/tag/list" . }}											 
+	{{ end }}
 <!-- 多说评论框 start -->
 <div class="ds-thread" data-thread-key="{{ .Date.Format "%Y/%m/%d" }}/{{ .Title }}/" data-title="{{.Title}}" data-url=""></div>
 <!-- 多说评论框 end -->
