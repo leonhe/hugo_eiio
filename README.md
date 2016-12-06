@@ -2,6 +2,8 @@
 
 This is a [hugo](https://gohugo.io/) static blog engine theme, if you like this theme,please give me star  ~_~
 
+![screenshot](images/screenshot.png)
+
 [See Dome](https://feiio.com)
 
 # Installation
@@ -12,6 +14,7 @@ cd themes
 git clone https://github.com/leonhe/hugo_eiio
 
 ```
+
 # Config
 Modify your configuration:
 ```
