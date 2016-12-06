@@ -17,8 +17,11 @@
 	<hr/>
 {{ end }}
 	{{ .Content }}
+	
+	
 	{{ if eq .Section "post" }}
-	      {{ partial "post/tag/list" . }}											 	{{ end }}
+	{{ partial "post/tag/list" . }}
+	{{ end }}
 	{{ partial "duoshuo" . }}
       </div>
   </div>

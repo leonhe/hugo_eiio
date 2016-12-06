@@ -4,11 +4,15 @@
       <div id="post">
 	<p><h2>{{.Title}} &nbsp;</p>
 	<hr/>
+	{{ range .Data.Pages.GroupByDate "2006" }}
+	<h3>{{ .Key }}</h3>
 	<ul>
-	  {{ range .Data.Pages }}
-	  <li>{{.Date.Format "Jan 2,2006"}}&nbsp;<a href="{{.Permalink}}">{{ .LinkTitle }}</a></li>
+	  {{ range .Pages }}
+	  <li>{{.Date.Format "Mon, Jan 2, 2006" }}&nbsp;<a href="{{.Permalink}}">{{ .Title }}</a></li>
 	  {{ end }}
 	</ul>
+	{{ end }}
+
       </div>
     </div>
     </div>
