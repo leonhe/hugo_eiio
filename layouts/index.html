@@ -3,10 +3,18 @@
     <div class="panel panel-default">
       <div class="panel-body">
 	<span class="text-primary">{{ .Site.Params.description}}</span>
-	      <div class="pull-right">
-		<a  target="_blank" href="https://github.com/leonhe&#10;"><img src="/images/github-logo-icon-2.png" width="25px" height="25px">&nbsp;GitHub</a>
+	<div class="pull-right">
+		<a  target="_blank" href="https://github.com/{{ .Site.Params.github}}"><img src="/images/github-logo-icon-2.png" width="25px" height="25px">&nbsp;GitHub</a>
 		<a target="_blank"  href="{{ .RSSLink }}"><img src="/images/rss-feed-logo-symbol-icon-10.png" width="25px" height="25px">&nbsp;RSS</a>
-	  </div>
+	</div>
+
+  {{ range $key, $value := .Site.Taxonomies }}
+    {{ if eq $key "categories" }}
+    <div class="categories">
+      {{ range first 10 $value.ByCount }}<a class="btn btn-default btn-xs " href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a>&nbsp;&nbsp;{{ end }}
+</div>
+  {{ end }}
+  {{ end }}
       </div>
     </div>
     
