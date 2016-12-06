@@ -1,4 +1,5 @@
 {{ template "_internal/disqus.html" . }}
+{{ if .Site.Params.duoshuo }}
 <!-- 多说评论框 start -->
 	<div class="ds-thread" data-thread-key="{{.URL}}" data-title="{{.Title}}" data-url="{{ .Site.BaseURL }}{{ .URL}}"></div>
 <!-- 多说评论框 end -->
@@ -15,3 +16,4 @@ var duoshuoQuery = {short_name:"heyuanfei"};
 	})();
 	</script>
 <!-- 多说公共JS代码 end -->
+{{ end }}

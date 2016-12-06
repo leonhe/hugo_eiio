@@ -26,7 +26,7 @@ theme = "hugo_eiio"
 Paginate=15 
 PaginatePath="page"
 pygmentsuseclasses = true
-#disqusShortname = "user id"
+disqusShortname = "user id"
 googleAnalytics='google analytics code'
 [taxonomies]
   category = "categories"
@@ -36,6 +36,7 @@ googleAnalytics='google analytics code'
   description = "site description"
   author = "your name"
   github ="github username"
+  duoshuo = false #disable duoshuo comment
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
