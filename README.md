@@ -7,13 +7,14 @@ This is a [hugo](https://gohugo.io/) static blog engine theme, if you like this 
 [See Dome](https://feiio.com)
 # Installation
 Inside the folder of your Hugo site run:
-`
+```
 cd themes
 git clone https://github.com/leonhe/hugo_eiio
-`
+
+```
 # Config
 Modify your configuration:
-`
+```
 baseurl = "https://feiio.com/"
 title = "阿拉伯的鞋匠"
 languageCode = "zh-CN"
@@ -36,4 +37,5 @@ googleAnalytics='UA-66653712-1'
   changefreq = "monthly"
   priority = 0.5
   filename = "sitemap.xml"
-`
+
+```
