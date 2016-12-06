@@ -15,7 +15,7 @@ git clone https://github.com/leonhe/hugo_eiio
 # Config
 Modify your configuration:
 ```
-baseurl = "https://feiio.com/"
+baseurl = "site url"
 title = "Site Name"
 languageCode = "zh-CN"
 themesdir = "themes"
