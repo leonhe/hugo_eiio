@@ -37,6 +37,7 @@ googleAnalytics='google analytics code'
   author = "your name"
   github ="github username"
   duoshuo = false #disable duoshuo comment
+  securityPolicy = false #disable https content security policy
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
