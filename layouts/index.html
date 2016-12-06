@@ -11,7 +11,7 @@
   {{ range $key, $value := .Site.Taxonomies }}
     {{ if eq $key "categories" }}
     <div class="categories">
-      {{ range first 10 $value.ByCount }}<a class="btn btn-default btn-xs " href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a>&nbsp;&nbsp;{{ end }}
+      {{ range first 10 $value.ByCount }}<a class="btn btn-default btn-xs text-capitalize" href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a>&nbsp;&nbsp;{{ end }}
 </div>
   {{ end }}
   {{ end }}
