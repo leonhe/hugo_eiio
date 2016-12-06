@@ -1,10 +1,4 @@
-{{ partial "header.html" }}
-{{ partial "nav" . }}
-
-<div class="jumbotron masthead" role="main">
-	<div class="row">
-	  <div class="col-md-8 col-md-offset-2">
-	    <div class="container ">
+{{ define "main"  }}
   <div class="panel panel-default">
     <div class="panel-body">
       <div id="post" >
@@ -29,11 +23,5 @@
 	{{ partial "duoshuo" . }}
       </div>
   </div>
-
 </div>
-
-      	    </div>
-	  </div>
-	</div>
-      </div>
-{{ partial "footer.html"}}
+{{ end }}

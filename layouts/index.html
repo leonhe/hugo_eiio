@@ -1,9 +1,4 @@
-{{ partial "header.html" }}
-{{ partial "nav" . }} 
-<div class="jumbotron masthead" role="main">
-	<div class="row">
-	  <div class="col-md-8 col-md-offset-2">
-	    <div class="container ">
+{{ define "main" }}
 	            <!--- icon container --->
     <div class="panel panel-default">
       <div class="panel-body">
@@ -14,6 +9,7 @@
 	  </div>
       </div>
     </div>
+    
 <!-- post list --->
     <div class="panel panel-default">
     <div class="panel-heading">
@@ -30,9 +26,4 @@
     </div>
     </div>
     <!--- end post --->
-
-      	    </div>
-	  </div>
-	</div>
-      </div>
-{{ partial "footer.html"}}
+{{ end }}
