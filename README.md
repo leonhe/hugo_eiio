@@ -39,3 +39,6 @@ googleAnalytics='google analytics code'
   filename = "sitemap.xml"
 
 ```
+
+# License
+This theme is released under the [MIT License](https://github.com/leonhe/hugo_eiio/blob/master/LICENSE).
