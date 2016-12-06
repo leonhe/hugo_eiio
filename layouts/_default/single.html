@@ -17,11 +17,23 @@
 	<hr/>
 {{ end }}
 	{{ .Content }}
+
 	
-	
+
 	{{ if eq .Section "post" }}
+	<br/>
+
+<p>
+  {{ partial "categories" . }}
+	  {{ range .Params.categories }}
+	<a class="btn btn-default btn-xs" href="/categories/{{ . | urlize }}">{{ . }}</a>
+	{{ end }}
+
+	<br/>
+	
 	{{ partial "post/tag/list" . }}
 	{{ end }}
+	</p>
 	{{ partial "duoshuo" . }}
       </div>
   </div>

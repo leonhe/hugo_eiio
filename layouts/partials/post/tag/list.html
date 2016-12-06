@@ -1,6 +1,4 @@
 {{ with .Params.tags }}
-<div class="tags-list">
-  Tags:
-  {{ delimit (apply (apply (sort .) "partial" "post/tag/link" ".") "chomp" ".") ", " }}
-</div>
+<strong>Tags:</strong>
+  {{ delimit (apply (apply (sort .) "partial" "post/tag/link" ".") "chomp" ".") " " }}
 {{ end }}
