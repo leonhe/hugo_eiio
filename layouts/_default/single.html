@@ -2,8 +2,8 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <div id="post" >
-{{ if eq .Section "post" }}
 	<p><h2> {{ .Title }} </h2>
+	  {{ if eq .Section "post" }}
 	  <small class="text-muted">
 	    发表于&nbsp;<time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }} </time>
 	  </small>
@@ -14,11 +14,10 @@
 	  <a href='/'><span class="label label-danger"></span></a>
 
 	</p>
-	<hr/>
-{{ end }}
-	{{ .Content }}
 
-	
+{{ end }}
+	<hr/>
+	{{ .Content }}
 
 	{{ if eq .Section "post" }}
 	<br/>
