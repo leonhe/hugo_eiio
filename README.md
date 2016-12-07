@@ -38,6 +38,7 @@ googleAnalytics='google analytics code'
   github ="github username"
   duoshuo = false #disable duoshuo comment
   securityPolicy = false #disable https content security policy
+  footerRight="Your tips content" #footer right content
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
