@@ -8,7 +8,7 @@ description = "personal blog&project theme"
 homepage = "https://feiio.com/"
 tags = ["blog"]
 features = ["blog", "project"]
-min_version = 1.0.1
+min_version = 0.17
 
 [author]
   name = "Leon He"
