@@ -2,7 +2,7 @@
 
 This is a [hugo](https://gohugo.io/) static blog engine theme, if you like this theme,please give me star  ~_~
 
-![screenshot](https://github.com/leonhe/hugo_eiio/blob/master/images/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/leonhe/hugo_eiio/master/images/screenshot.png)
 
 [See Dome](https://feiio.com)
 
