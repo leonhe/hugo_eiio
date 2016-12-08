@@ -21,6 +21,7 @@ Modify your configuration:
 baseurl = "site url"
 title = "Site Name"
 languageCode = "zh-CN"
+copyright = "Copyright right infomation."
 themesdir = "themes"
 theme = "hugo_eiio"
 Paginate=15 
