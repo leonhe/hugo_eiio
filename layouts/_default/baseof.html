@@ -8,7 +8,7 @@
     <base href="{{ .Params.BaseURL }}">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }} | {{ .Site.Params.description }}</title>
     {{ if .Site.Params.securityPolicy }}
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     {{ end }}
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
