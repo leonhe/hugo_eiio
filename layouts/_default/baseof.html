@@ -23,16 +23,16 @@
    <body>
      {{ partial "nav" . }}
      <div class="jumbotron masthead" role="main">
-       <div class="row">
-	 <div class="col-md-8 col-md-offset-2">
-	   <div class="container ">
-       {{ block "main" . }}
+       <div class="container">
+       <div class="row">	   
+	     <div class="col-md-8 col-md-offset-2">
+		 {{ block "main" . }}
       <!-- The part of the page that begins to differ between templates -->
       {{ end }}
-	   </div>
+	       </div>
 	 </div>
        </div>
- </div>
+     </div>
 <!-- start footer --->
  <div class="container footer">
   <div class="row">
