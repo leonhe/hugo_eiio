@@ -5,7 +5,7 @@
 	<p><h2> {{ .Title }} </h2>
 	  {{ if eq .Section "post" }}
 	  <small class="text-muted">
-	    发表于&nbsp;<time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }} </time>
+	    posted by:&nbsp;<time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }} </time>
 	  </small>
 	</p>
 
