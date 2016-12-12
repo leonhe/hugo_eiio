@@ -1,5 +1,15 @@
 {{ define "main"  }}
-  <div class="panel panel-default">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+<script type="text/javascript">
+ hljs.initHighlightingOnLoad();
+$(document).ready(function() {
+  $('pre').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+<div class="panel panel-default">
     <div class="panel-body">
       <div id="post" >
 	<p><h2> {{ .Title }} </h2>
