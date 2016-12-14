@@ -2,20 +2,20 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
 <script type="text/javascript">
- hljs.initHighlightingOnLoad();
+  hljs.initHighlightingOnLoad();
 $(document).ready(function() {
   $('pre').each(function(i, block) {
-    hljs.highlightBlock(block);
+  hljs.highlightBlock(block);
   });
 });
 </script>
 <div class="panel panel-default">
     <div class="panel-body">
-      <div id="post" >
-	<p><h2> {{ .Title }} </h2>
+      <div itemscope itemtype="http://schema.org/Article" id="post" >
+	<p><h2 itemprop="name"> {{ .Title }} </h2>
 	  {{ if eq .Section "post" }}
 	  <small class="text-muted">
-	    posted by:&nbsp;<time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }} </time>
+	  {{ .Site.Params.author }}  posted by:&nbsp;<time itemprop="datePublished"  content="{{ .Date.Format "Mon Jan 2,2016" }}"  datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }} </time>
 	  </small>
 	</p>
 
@@ -27,11 +27,12 @@ $(document).ready(function() {
 
 {{ end }}
 	<hr/>
-	{{ .Content }}
+	<span itemprop="articleBody">
+	  {{ .Content }}
+	</span>
 
 	{{ if eq .Section "post" }}
-	<br/>
-
+	<hr/>
 <p>
   {{ partial "categories" . }}
 	  {{ range .Params.categories }}
@@ -41,8 +42,13 @@ $(document).ready(function() {
 	<br/>
 	
 	{{ partial "post/tag/list" . }}
+		<div  class="text-center" id="cyReward" role="cylabs" data-use="reward"></div>
+<script type="text/javascript" charset="utf-8" src="http://changyan.itc.cn/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cysKcFfi2"></script>
+
+
 	{{ end }}
-	</p>
+</p>
 	{{ partial "duoshuo" . }}
       </div>
   </div>
