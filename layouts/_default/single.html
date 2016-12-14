@@ -9,10 +9,11 @@ $(document).ready(function() {
   });
 });
 </script>
+
 <div class="panel panel-default">
-    <div class="panel-body">
-      <div itemscope itemtype="http://schema.org/Article" id="post" >
-	<p><h2 itemprop="name"> {{ .Title }} </h2>
+  <div class="panel-body">
+      <div itemscope  id="post" >
+	<p><h1 data-toc-skip itemprop="name"> {{ .Title }} </h1>
 	  {{ if eq .Section "post" }}
 	  <small class="text-muted">
 	  {{ .Site.Params.author }}  posted by:&nbsp;<time itemprop="datePublished"  content="{{ .Date.Format "Mon Jan 2,2016" }}"  datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }} </time>
@@ -48,9 +49,8 @@ $(document).ready(function() {
 
 
 	{{ end }}
-</p>
 	{{ partial "duoshuo" . }}
       </div>
-  </div>
-</div>
+      </div></div>
+
 {{ end }}
