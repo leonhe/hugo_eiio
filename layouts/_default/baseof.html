@@ -6,7 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="XN4YmHgE76jTp2kNQ9qnsVSApl6yIQBzdyLe0BnbFks" />
 
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }} | {{ .Site.Params.description }}</title>
+  <title>
+    {{ if .IsHome }}
+    {{ block "title" . }}{{ .Site.Title }}{{ end }} | {{ .Site.Params.description }}
+    {{ end }}
+    {{ if or .IsPage .IsNode }}
+    {{ .Title }} - {{ .Site.Title }}
+    {{ end }}
+  </title>
     {{ if .Site.Params.securityPolicy }}
      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     {{ end }}
