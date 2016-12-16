@@ -14,7 +14,8 @@
     {{ .Title }} - {{ .Site.Title }}
     {{ end }}
   </title>
-    {{ if .Site.Params.securityPolicy }}
+  <link rel="shortcut icon" href="/favicon.ico" />
+  {{ if .Site.Params.securityPolicy }}
      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     {{ end }}
   <link rel="stylesheet" href="/css/bootstrap.min.css">
