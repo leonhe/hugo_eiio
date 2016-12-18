@@ -12,11 +12,14 @@ $(document).ready(function() {
 
 <div class="panel panel-default">
   <div class="panel-body">
-      <div itemscope  id="post" >
-	<p><h1 data-toc-skip itemprop="name"> {{ .Title }} </h1>
+      <article itemscope itemtype="http://schema.org/BlogPosting" id="post" >
+	<h1 itemprop="name headline"> {{ .Title }} </h1>
+	<p>
 	  {{ if eq .Section "post" }}
 	  <small class="text-muted">
-	  {{ .Site.Params.author }}  posted by:&nbsp;<time itemprop="datePublished"  content="{{ .Date.Format "Mon Jan 2,2016" }}"  datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }} </time>
+	    <span itemprop="author" itemscope itemtype="http://schema.org/Person" >
+	      <span itemprop="name">{{ .Site.Params.author }}</span>
+	    </span>  posted by:&nbsp;<time itemprop="datePublished"  content="{{ .Date.Format "Mon Jan 2,2016" }}"  datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }} </time>
 	  </small>
 	</p>
 
@@ -47,6 +50,6 @@ $(document).ready(function() {
 {{ partial "addthis" . }}
 {{ partial "duoshuo" . }}
       </div>
-      </div></div>
+      </div></article>
 
 {{ end }}

@@ -23,11 +23,14 @@
     <div class="panel-heading">
       <span class="glyphicon glyphicon-list-alt"></span>&nbsp;<b>Posts</b>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" itemtype="http://schema.org/ItemList" itemListElement>
       <div class="list-group">
 	{{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
 	{{ range $paginator.Pages }}
-	<a href="{{.Permalink}}" class="list-group-item"> <span class="badge">{{.Date.Format "Jan 02, 2006"}}</span>{{.Title}}</a>
+	
+	<a itemListElement  itemtype="http://schema.org/ListItem" itemscope   href="{{.Permalink}}" class="list-group-item"><span class="badge"  content="{{.Date.Format "Jan 02, 2006"}}" >{{.Date.Format "Jan 02, 2006"}}</span><span itemprop="name">{{.Title}}</span>
+	  <meta itemprop="url" content="{{.Permalink}}"/>
+</a>
 {{ end }}
       </div>
       {{ template "_internal/pagination.html" . }}
