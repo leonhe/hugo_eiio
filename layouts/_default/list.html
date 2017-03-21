@@ -2,15 +2,20 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <div id="post">
-	<p><h2>{{.Title}} &nbsp;</p>
+	<h2>{{.Title}} &nbsp;</h2>
 	<hr/>
 	{{ range .Data.Pages.GroupByDate "2006" }}
 	<h3>{{ .Key }}</h3>
+	<div itemscorpe itemtype="http://schema.org/ItemList" itemListElement>
 	<ul>
 	  {{ range .Pages }}
-	  <li>{{.Date.Format "Mon, Jan 2, 2006" }}&nbsp;<a href="{{.Permalink}}">{{ .Title }}</a></li>
+	  <li>{{.Date.Format "Mon, Jan 2, 2006" }}&nbsp;<a itemListElement  itemtype="http://schema.org/ListItem" href="{{.Permalink}}">
+	      <span itemprop="name">{{ .Title }}</span></a>
+	    <meta itemprop="datePublished"  content="{{.Date.Format "Jan 02, 2006"}}" />
+	    <meta  itemprop="url" content="{{.Permalink}}"/>
+	  </li>
 	  {{ end }}
-	</ul>
+	</ul></div>
 	{{ end }}
 	<hr/>
 	{{ partial "addthis" . }}
