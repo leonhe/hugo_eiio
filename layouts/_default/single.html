@@ -13,7 +13,7 @@ $(document).ready(function() {
 <div class="panel panel-default">
   <div class="panel-body">
       <article itemscope itemtype="http://schema.org/BlogPosting" id="post" >
-	<h1 itemprop="name headline"> {{ .Title }} </h1>
+	        <p><h1 itemprop="name headline"> {{ .Title }} </h1></p>
 	<p>
 	  {{ if eq .Section "post" }}
 	  <small class="text-muted">

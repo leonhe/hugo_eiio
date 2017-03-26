@@ -10,7 +10,7 @@
     {{ if .IsHome }}
     {{ block "title" . }}{{ .Site.Title }}{{ end }} | {{ .Site.Params.description }}
     {{ end }}
-    {{ if or .IsPage .IsNode }}
+    {{ if not .IsHome }}
     {{ .Title }} - {{ .Site.Title }}
     {{ end }}
   </title>
@@ -38,7 +38,6 @@
        <div class="container">
 	 <div class="row">
 	   <div class="col-sm-3">
-
 		 <nav id="toc" data-spy="affix" data-toggle="toc"></nav>
   </div>
 
@@ -55,7 +54,7 @@
  <div class="container footer">
   <div class="row">
     <div class="col-md-10">
-      <small class="text-muted">{{ .Site.Copyright }} Theme:<a href="https://feiio.com/">eiio</a></small>
+      <small class="text-muted">{{ .Site.Copyright }} Theme:<a href="https://leonhe.me/">eiio</a></small>
     </div>
     <div class="col-md-2">
       <small class="text-muted">{{ .Site.Params.footerRight}}</small>
