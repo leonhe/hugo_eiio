@@ -37,7 +37,6 @@ googleAnalytics='google analytics code'
   description = "site description"
   author = "your name"
   github ="github username"
-  duoshuo = false #disable duoshuo comment
   securityPolicy = false #disable https content security policy
   footerRight="Your tips content" #footer right content
 [sitemap]

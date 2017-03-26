@@ -48,7 +48,7 @@ $(document).ready(function() {
 	<hr/>
 	{{ end }}
 {{ partial "addthis" . }}
-{{ partial "duoshuo" . }}
+{{ template "_internal/disqus.html" . }}
       </div>
       </div></article>
 
