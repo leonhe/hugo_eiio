@@ -6,7 +6,7 @@
 	 <span class="text-primary">{{ .Site.Params.description}}</span>
 	 <div class="pull-right">
 
-	   <a target="_blank"  href="{{ .RSSLink }}"><img src="/images/rss-feed-logo-symbol-icon-10.png" width="25px" height="25px">&nbsp;RSS</a>
+	   <a target="_blank" class="rss"  href="{{ .RSSLink }}"><img src="/images/rss-feed-logo-symbol-icon-10.png" width="25px" height="25px">&nbsp;RSS</a>
 	 </div>
 	</div>
   {{ range $key, $value := .Site.Taxonomies }}
