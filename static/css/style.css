@@ -62,3 +62,20 @@ nav[data-toggle='toc'] {
     display: block;
   }
 }
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus{
+	background-color: #ed8143;
+	border-color: #ea7432;
+}
+
+.pagination>li>a, .pagination>li>span  {
+	color: #ed8143;	
+}
+ul li{  
+list-style-type:none; 
+}  
+.text-primary, .rss , .footer a ,.navbar-default .navbar-brand{
+	color: #ed8143;
+}
+.badge {
+   background-color: #888;
+}

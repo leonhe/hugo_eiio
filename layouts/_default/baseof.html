@@ -27,21 +27,14 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="canonical" href="{{ .Permalink }}">
   {{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
-<!-- add after bootstrap.min.css -->
-<link rel="stylesheet" href="/css/bootstrap-toc.min.css" type="text/css">
-<!-- add after bootstrap.min.js -->
-<script src="/js/bootstrap-toc.min.js" type="text/javascript"></script>
    </head>
    <body data-spy="scroll" data-target="#toc">
      {{ partial "nav" . }}
      <div class="jumbotron masthead" role="main">
        <div class="container">
 	 <div class="row">
-	   <div class="col-sm-3">
-		 <nav id="toc" data-spy="affix" data-toggle="toc"></nav>
-  </div>
 
- 	   <div class="col-md-8 col-md-offset-2">
+ 	   <div class="col-md-8 col-md-offset-2 ">
 	   {{ block "main" . }}
       <!-- The part of the page that begins to differ between templates -->
       {{ end }}
