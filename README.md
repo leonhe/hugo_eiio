@@ -39,6 +39,7 @@ googleAnalytics='google analytics code'
   github ="github username"
   securityPolicy = false #disable https content security policy
   footerRight="Your tips content" #footer right content
+  addthisID="addthis.com sharder plugin id"
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
