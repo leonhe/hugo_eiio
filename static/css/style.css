@@ -1,7 +1,8 @@
 body {
       padding-top: 25px;
       padding-bottom: 0px;
-      font-family: "PT Serif",Georgia,Times,Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif
+      
+      font-family: "Monaco","Hiragino Sans GB","Heiti SC","SimSun","serif","sans-serif","Courier New"
   }
 
 #post {
