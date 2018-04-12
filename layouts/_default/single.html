@@ -1,53 +1,24 @@
 {{ define "main"  }}
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
-<script type="text/javascript">
-  hljs.initHighlightingOnLoad();
-$(document).ready(function() {
-  $('pre').each(function(i, block) {
-  hljs.highlightBlock(block);
-  });
-});
-</script>
-
 <div class="panel panel-default">
   <div class="panel-body">
-      <article itemscope itemtype="http://schema.org/BlogPosting" id="post" >
-	        <p><h1 itemprop="name headline"> {{ .Title }} </h1></p>
-	<p>
+      <article id='post' >
+	<h1> {{ .Title }} </h1>
 	  {{ if eq .Section "post" }}
-	  <small class="text-muted">
-	    <span itemprop="author" itemscope itemtype="http://schema.org/Person" >
-	      <span itemprop="name">{{ .Site.Params.author }}</span>
-	    </span>  posted by:&nbsp;<time itemprop="datePublished"  content="{{ .Date.Format "Mon Jan 2,2016" }}"  datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }} </time>
-	  </small>
-	</p>
-
-	<p>
-	  
-	  <a href='/'><span class="label label-danger"></span></a>
-
-	</p>
-
+	  <span class="text-muted">Posted by:&nbsp;{{ .Date.Format "Mon Jan 2, 2006" }}</span>
 {{ end }}
-	<hr/>
-	<span itemprop="articleBody">
 	  {{ .Content }}
-	</span>
 
-	{{ if eq .Section "post" }}
-	<hr/>
-<p>
-  {{ partial "categories" . }}
+	  {{ if eq .Section "post" }}
+	  	  <div class="tags">	
+	    <p class="categories">
 	  {{ range .Params.categories }}
-	<a class="btn btn-default btn-xs" href="/categories/{{ . | urlize }}">{{ . }}</a>
-	{{ end }}
-	<br/>
-	
-	{{ partial "post/tag/list" . }}
-	<hr/>
-	{{ end }}
-{{ partial "addthis" . }}
+	  <a class="btn btn-default btn-xs text-capitalize" href="/categories/{{ . | urlize }}">{{ . }}</a>
+	  {{ end }}
+	    </p>
+	    {{ partial "post/tag/list" . }}
+	    	  </div>
+	    {{ end }}
+
 {{ template "_internal/disqus.html" . }}
       </div>
       </div></article>
