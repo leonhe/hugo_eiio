@@ -5,17 +5,17 @@ name = "eiio"
 license = "MIT"
 licenselink = "https://github.com/leonhe/hugo_eiio/master/LICENSE.md"
 description = "personal blog&project theme"
-homepage = "https://leonhe.me/"
+homepage = "https://feiio.com/"
 tags = ["blog"]
 features = ["blog", "project"]
 min_version = 0.17
 
 [author]
   name = "Leon He"
-  homepage = "http://leonhe.me"
+  homepage = "https://feiio.com"
 
 # If porting an existing theme
 [original]
   name = "hugo_eiio"
-  homepage = "https://leonhe.me"
+  homepage = "https://feiio.com"
   repo = "https://github.com/leonhe/hugo_eiio"
