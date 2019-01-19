@@ -1,7 +1,17 @@
+html {
+	margin: 0;
+	font: .9em/1.6em "Droid Serif", Cambria, Georgia, "DejaVu Serif", serif;
+	background-attachment: fixed;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-color: white;
+    }
+
 body {
       padding-top: 25px;
       padding-bottom: 0px;
-      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif
+      /* font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif */
+																					
 }
 
 pre {
@@ -133,4 +143,8 @@ pre td.hljs-ln-numbers {
 /* for block of code */
 pre td.hljs-ln-code {
     padding-left: 10px;
+}
+
+blockquote {
+    color: #000000ab;
 }
