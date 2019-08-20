@@ -40,6 +40,7 @@ googleAnalytics='google analytics code'
   securityPolicy = false #disable https content security policy
   footerRight="Your tips content" #footer right content
   addthisID="addthis.com sharder plugin id"
+  mainSections = ['page']
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
