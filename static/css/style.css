@@ -1,150 +1,196 @@
-html {
-	margin: 0;
-	font: .9em/1.6em "Droid Serif", Cambria, Georgia, "DejaVu Serif", serif;
-	background-attachment: fixed;
-	background-position: right bottom;
-	background-repeat: no-repeat;
-	background-color: white;
+    html {
+	    margin: 0;
+	    font: .9em/1.6em "Droid Serif", Cambria, Georgia, "DejaVu Serif", serif;
+	    background-attachment: fixed;
+	    background-position: right bottom;
+	    background-repeat: no-repeat;
+	    background-color: white;
+	}
+
+    body {
+	padding-top: 25px;
+	padding-bottom: 0px;
+	/* font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif */
+
     }
 
-body {
-      padding-top: 25px;
-      padding-bottom: 0px;
-      /* font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif */
-																					
-}
-
-pre {
-    display: block;
-    padding: 0px;
-    margin: 0 0 0px;
-    font-size: 13px;
-    line-height: 1.42857143;
-    color: #333;
-    word-break: break-all;
-    word-wrap: break-word;
-    background-color: #f5f5f5;
-    border: 0px solid #ccc;
-    border-radius: 0px;
-}    
-.articleBody {
-    padding:10px 0 10px 0;
-}
+    pre {
+	display: block;
+	padding: 0px;
+	margin: 0 0 0px;
+	font-size: 13px;
+	line-height: 1.42857143;
+	color: #333;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: #f5f5f5;
+	border: 0px solid #ccc;
+	border-radius: 0px;
+    }    
+    .articleBody {
+	padding:10px 0 10px 0;
+    }
 
 
-.articleBody p {
-    line-height:26px;
-    font-size: 14px;
-}
-.panel-body h1 {
-    line-height:18px;
-    padding:10px 0 10px 0;
-    color: black;	
-    font-size: 1.6em;
-    border-bottom: 1px solid #ddd;
-    line-height: 16px;
-}
-.panel-body h2 {
-    line-height:16px;
-    padding:10px 0 10px 0;
-    color: black;
-    font-size: 1.5em;
-}
-.tags {
-    border-top: 1px solid #ddd;
-    display: block;
-    padding:10px 0 10px 0;
-}
-li {
-    line-height: 26px;
-}
-.panel-body h3 {
-    font-size: 1.3em;
-    color: grey;
+    .articleBody p {
+	line-height:26px;
+	font-size: 14px;
+    }
+    .panel-body h1 {
+	line-height:18px;
+	padding:10px 0 10px 0;
+	color: black;	
+	font-size: 1.6em;
+	border-bottom: 1px solid #ddd;
+	line-height: 16px;
+    }
+    .panel-body h2 {
+	line-height:16px;
+	padding:10px 0 10px 0;
+	color: black;
+	font-size: 1.5em;
+    }
+    .tags {
+	border-top: 1px solid #ddd;
+	display: block;
+	padding:10px 0 10px 0;
+    }
+    li {
+	line-height: 26px;
+    }
+    .panel-body h3 {
+	font-size: 1.3em;
+	color: grey;
+    }
+
+    .panel-body h4 {
+	font-size: 1.2em;
+	color: grey;
+    }
+
+    .panel-body h5 {
+	font-size: 1.1em;
+	color: grey;
+    }
+
+    .panel-body h6 {
+	font-size: 1.0em;
+	color: grey;
+    }
+
+    #post {
+	padding-left: 30px;
+	padding-right: 30px;
+    }
+
+
+    .label {
+	display: inline-block;
+	font-size: 12px;
+    }
+    .jumbotron p {
+	line-height: 26px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	font-weight: 20;
+    }
+    .jumbotron .categories {
+	display: inline-block;
+	margin-bottom: 0px;
+	margin-top: 5px;
+    }
+
+    .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus{
+	    background-color: #ed8143;
+	    border-color: #ea7432;
+    }
+
+    .pagination>li>a, .pagination>li>span  {
+	    color: #ed8143;	
+    }
+
+    .text-primary, .rss , .footer a ,.navbar-default .navbar-brand{
+	    color: #ed8143;
+    }
+    .badge {
+    background-color: #888;
+    }
+
+    .text-muted {
+	padding: 0px 0 10px 0;
+	display: block;
+	font-size: 12px;
+    }
+
+    /* for block of numbers */
+    pre td.hljs-ln-numbers {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	text-align: center;
+	color: #ccc;
+	border-right: 1px solid #CCC;
+	vertical-align: top;
+	padding-right: 5px;
+
+	/* your custom style here */
+    }
+
+    /* for block of code */
+    pre td.hljs-ln-code {
+	padding-left: 10px;
+    }
+
+    blockquote {
+	color: #000000ab;
+    }
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
 }
 
-.panel-body h4 {
-    font-size: 1.2em;
-    color: grey;
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
-
-.panel-body h5 {
-    font-size: 1.1em;
-    color: grey;
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
 }
-
-.panel-body h6 {
-    font-size: 1.0em;
-    color: grey;
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
-
-#post {
-      padding-left: 30px;
-      padding-right: 30px;
-  }
-
-
-.label {
-    display: inline-block;
-    font-size: 12px;
+th {
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+    padding: .75rem;
+    border: 1px solid #32383e;
 }
-.jumbotron p {
-    line-height: 26px;
-    margin-bottom: 15px;
-    font-size: 14px;
-    font-weight: 20;
-}
-.jumbotron .categories {
-    display: inline-block;
-    margin-bottom: 0px;
-    margin-top: 5px;
-}
-
-.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus{
-	background-color: #ed8143;
-	border-color: #ea7432;
-}
-
-.pagination>li>a, .pagination>li>span  {
-	color: #ed8143;	
-}
-
-.text-primary, .rss , .footer a ,.navbar-default .navbar-brand{
-	color: #ed8143;
-}
-.badge {
-   background-color: #888;
-}
-
-.text-muted {
-    padding: 0px 0 10px 0;
-    display: block;
-    font-size: 12px;
-}
-
-/* for block of numbers */
-pre td.hljs-ln-numbers {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-    text-align: center;
-    color: #ccc;
-    border-right: 1px solid #CCC;
+td {
+    border: 1px solid #dee2e6;
+    padding: .75rem;
     vertical-align: top;
-    padding-right: 5px;
-
-    /* your custom style here */
+}
+.hljs-ln td {
+    border: 0px;
 }
 
-/* for block of code */
-pre td.hljs-ln-code {
-    padding-left: 10px;
+.title{
+    /* font-family: 'ZCOOL QingKe HuangYou', cursive; */
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 24px;
 }
 
-blockquote {
-    color: #000000ab;
-}
