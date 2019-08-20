@@ -24,7 +24,7 @@
     </div>
     <div class="panel-body" itemtype="http://schema.org/ItemList" itemListElement>
       <div class="list-group">
-	{{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
+	{{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") }}
 	{{ range $paginator.Pages }}
 	
 	<a itemListElement  itemtype="http://schema.org/ListItem" itemscope   href="{{.Permalink}}" class="list-group-item"><span class="badge"  content="{{.Date.Format "Jan 02, 2006"}}" >{{.Date.Format "Jan 02, 2006"}}</span><span itemprop="name">{{.Title}}</span>

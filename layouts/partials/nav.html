@@ -10,7 +10,7 @@
       <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </div>
 
-    {{$url:= .URL | absLangURL }}
+    {{$url:= .Permalink | absLangURL }}
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
 	{{ $siteURL:= "/" | absLangURL }}
