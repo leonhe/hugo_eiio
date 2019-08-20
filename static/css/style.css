@@ -189,3 +189,14 @@ td {
     font-size: 26px;
 }
 
+.pull-right a{
+    padding-left: 10px;   
+    color: #888;
+}
+a:hover {
+    color: #ed8143;
+}
+.pull-right img {
+    margin-right: 5px;
+    
+}
