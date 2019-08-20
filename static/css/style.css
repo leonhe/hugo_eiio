@@ -187,8 +187,7 @@ td {
 }
 
 .title{
-    /* font-family: 'ZCOOL QingKe HuangYou', cursive; */
-    text-align: center;
+    text-align: left;
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 24px;
