@@ -142,8 +142,18 @@
     }
 
     blockquote {
-	color: #000000ab;
+	color: #d6530d;
+	font-weight: bold;
+	font-style: italic;
+	/* margin: 1em 3em; } */
     }
+/* 	blockquote p:before {
+ * 	content: '"'; }
+ * blockquote p:after {
+ * 	content: '"'; } */
+    /* blockquote {
+     * 	color: #000000ab;
+     * } */
 table {
     width: 100%;
     max-width: 100%;
