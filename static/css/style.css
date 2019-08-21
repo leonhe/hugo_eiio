@@ -142,9 +142,10 @@
     }
 
     blockquote {
-	color: #d6530d;
+	color: #708090;
 	font-weight: bold;
 	font-style: italic;
+    border-left: 5px solid #ffa68c;
 	/* margin: 1em 3em; } */
     }
 /* 	blockquote p:before {
