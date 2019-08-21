@@ -4,7 +4,9 @@
       <article id='post' >
 	<div class='title'> {{ .Title }} </div>
 	  {{ if eq .Section "post" }}
-	  <span class="text-muted">Posted by:&nbsp;{{ .Date.Format "Mon Jan 2, 2006" }}</span>
+	  <span class="text-muted">Posted by:&nbsp;{{ .Date.Format "Mon Jan 2, 2006" }} | 
+	  Word Count: {{ .WordCount }}&nbsp;&nbsp; | 
+	  Reading Time: {{ .ReadingTime }} Minute&nbsp;&nbsp;</span>
 {{ end }}
 	  {{ .Content }}
 
