@@ -141,13 +141,46 @@
 	padding-left: 10px;
     }
 
-    blockquote {
-	color: #708090;
-	font-weight: bold;
-	font-style: italic;
-    border-left: 5px solid #ffa68c;
-	/* margin: 1em 3em; } */
-    }
+     blockquote {
+    	font-weight: bold;
+    	font-style: italic;
+      border-left: 5px solid #ffa68c;
+    display:block; 
+  background: #fff;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+ 
+  /*字体*/
+  font-family: Georgia, serif;
+  line-height: 1.2;
+  color: #666;
+  text-align: justify;
+  /*边框 - (选项)*/
+  border-right: 2px solid #ffa68c;
+ 
+  /*盒子阴影 - (选项)*/
+  -moz-box-shadow: 2px 2px 8px #ccc;
+  -webkit-box-shadow: 2px 2px 8px #ccc;
+  box-shadow: 2px 2px 8px #ccc;
+}
+blockquote::before{
+  content: "\201C"; /*左双引号的Unicode编码*/
+   /*字体*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+ 
+  /*位置*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+blockquote::after{
+  content: ""; /*如果要显示右双引号，则写 content: "\201D"; */
+}
+
 /* 	blockquote p:before {
  * 	content: '"'; }
  * blockquote p:after {
