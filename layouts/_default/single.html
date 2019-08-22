@@ -4,17 +4,19 @@
       <article id='post' >
 	<div class='title'> {{ .Title }} </div>
 	  {{ if eq .Section "post" }}
-	  <span class="text-muted">Posted by:&nbsp;{{ .Date.Format "Mon Jan 2, 2006" }} | 
-	  Word Count: {{ .WordCount }}&nbsp;&nbsp; | 
-	  Reading Time: {{ .ReadingTime }} Minute&nbsp;&nbsp;</span>
+	  <span class="text-muted"><ion-icon name="ios-calendar"></ion-icon>Posted by:&nbsp;{{ .Date.Format "Mon Jan 2, 2006" }} | 
+	  <ion-icon name="ios-podium"></ion-icon>Word Count: {{ .WordCount }}&nbsp;&nbsp; | 
+	  <ion-icon name="ios-time"></ion-icon> Reading Time: {{ .ReadingTime }} Minute&nbsp;&nbsp;</span>
 {{ end }}
 	  {{ .Content }}
 
 	  {{ if eq .Section "post" }}
 	  	  <div class="tags">	
+
 	    <p class="categories">
+<ion-icon name="folder"></ion-icon>
 	  {{ range .Params.categories }}
-	  <a class="btn btn-default btn-xs text-capitalize" href="/categories/{{ . | urlize }}">{{ . }}</a>
+	  <a class="btn btn-default btn-xs text-capitalize" href="/categories/{{ . | urlize }}"> {{ . }}</a>
 	  {{ end }}
 	    </p>
 	    {{ partial "post/tag/list" . }}

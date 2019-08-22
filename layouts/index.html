@@ -3,20 +3,20 @@
     <div class="panel panel-default">
       <div class="panel-body">
 	<div>
-	 <span class="text-primary">{{ .Site.Params.description}}</span>
+	 <span class="text-primary"><ion-icon name="paw"></ion-icon>{{ .Site.Params.description}}</span>
 	 <div class="pull-right">
-	    <a target="_blank"   href="https://twitter.com/{{ .Site.Params.twitter }}"><img src="/images/twitter_icon.png" width="25px" height="25px"></a>
-	    <a target="_blank"   href="mailto:{{ .Site.Params.email }}"><img src="/images/email_icon.jpg" width="25px" height="25px"></a>
+	    <a target="_blank"   href="https://twitter.com/{{ .Site.Params.twitter }}"><ion-icon name="logo-twitter"></ion-icon></a>
+	    <a target="_blank"   href="mailto:{{ .Site.Params.email }}"><ion-icon name="ios-mail"></ion-icon></a>
 
 
-	   <a target="_blank"   href="https://github.com/{{ .Site.Params.github }}"><img src="/images/github-logo-icon-2.png" width="25px" height="25px"></a>
+	   <a target="_blank"   href="https://github.com/{{ .Site.Params.github }}"><ion-icon name="logo-github"></ion-icon></a>
 
-	   <a target="_blank" class="rss"  href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}"><img src="/images/rss-feed-logo-symbol-icon-10.png" width="25px" height="25px"></a>
+	   <a target="_blank" class="rss"  href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}"><ion-icon name="logo-rss"></ion-icon></a>
 	 </div>
 	</div>
   {{ range $key, $value := .Site.Taxonomies }}
     {{ if eq $key "categories" }}
-<p class="categories">
+<p class="categories"><ion-icon name="folder"></ion-icon>
       {{ range first 10 $value.ByCount }}<a class="btn btn-default btn-xs text-capitalize" href="/{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a>&nbsp;{{ end }}
 </p>
   {{ end }}
@@ -33,7 +33,8 @@
 	{{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") }}
 	{{ range $paginator.Pages }}
 	
-	<a itemListElement  itemtype="http://schema.org/ListItem" itemscope   href="{{.Permalink}}" class="list-group-item"><span class="badge"  content="{{.Date.Format "Jan 02, 2006"}}" >{{.Date.Format "Jan 02, 2006"}}</span><span itemprop="name">{{.Title}}</span>
+	<a itemListElement  itemtype="http://schema.org/ListItem" itemscope   href="{{.Permalink}}" class="list-group-item">
+	  <span class="badge"  content="{{.Date.Format "Jan 02, 2006"}}" > {{.Date.Format "Jan 02, 2006"}}</span><span itemprop="name">{{.Title}}</span>
 	  <meta itemprop="url" content="{{.Permalink}}"/>
 </a>
 {{ end }}

@@ -244,3 +244,24 @@ a:hover {
     margin-right: 5px;
     
 }
+ion-icon {
+  font-size: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+/* .categories a {
+ *     color: #515456;
+ * } */
+.pull-right ion-icon {
+    font-size: 24px;
+}
+.pull-right ion-icon a:hover {
+    color:#ed8143;
+    active:#ed8143;
+}
+
+
+a.list-group-item:hover, a.list-group-item:focus {
+    color: #ed8143;
+}
