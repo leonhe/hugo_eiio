@@ -1,0 +1,27 @@
+{{ define "main" }}  <div class="panel panel-default">
+    <div class="panel-body">
+      <div id="post">
+	<div class='title'>{{ .Title }}</div>
+{{ $data := .Data }}
+	<div class="terms">
+<div class="terms-title">
+        Total : {{ len .Data.Terms }} 
+      </div>
+<div class="terms-tags">
+{{ range .Data.Terms.ByCount }}
+{{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
+    <a class="terms-link" href="{{ $termLink }}">{{ .Term }}<em class="terms-count">{{ .Count }}</em>
+</a>
+    <!-- <ul>
+ !--     {{ range .Pages | first 5 }}
+ !--     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+ !--     {{ end }}
+ !--     {{ if gt (len .Pages) 5 }}
+ !--     <li><a href="{{ $termLink }}">……</a></li>
+ !--     {{ end }}
+ !-- </ul> -->
+    {{ end }}
+    </div>
+    </div>
+</div></div></div>
+{{ end }}

@@ -229,7 +229,7 @@ td {
 .title{
     text-align: left;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
     font-size: 26px;
 }
 
@@ -264,4 +264,45 @@ ion-icon {
 
 a.list-group-item:hover, a.list-group-item:focus {
     color: #ed8143;
+}
+
+.terms {
+    margin: 2em 0 3em;
+    text-align: center;
+    font-family: Athelas,STHeiti,Microsoft Yahei,serif;
+}
+
+.terms .terms-title {
+    display: inline-block;
+    font-size: 18px;
+    color: #c05b4d;
+    border-bottom: 2px solid #c05b4d;
+}
+.terms .terms-tags {
+    margin: 10px 0;
+}
+
+.terms .terms-tags .terms-link {
+    display: inline-block;
+    position: relative;
+    margin: 5px 10px;
+    word-wrap: break-word;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    font-size: 18px;
+}
+
+.terms .terms-tags .terms-link .terms-count {
+    display: inline-block;
+    position: relative;
+    top: -8px;
+    right: -2px;
+    color: #c05b4d;
+    font-size: 14px;
 }
