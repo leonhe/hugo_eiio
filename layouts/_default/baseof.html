@@ -18,30 +18,13 @@
   {{ if .Site.Params.securityPolicy }}
      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     {{ end }}
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="all">
   <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/holder.min.js" type='text/javascript'></script>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/highlight/styles/github-gist.css">  
-<script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
   <link rel="canonical" href="{{ .Permalink }}">
   <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
-  <script src="/highlight/highlight.pack.js" type='text/javascript'></script>
-  <script src="/highlight/highlightjs-line-numbers.min.js"></script>
-  <script type="text/javascript">
-
-    $(document).ready(function() {
-    
-    hljs.initHighlightingOnLoad();
-    $('pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-    hljs.lineNumbersBlock(block);
-    });
-});
-  </script>
    </head>
    <body data-spy="scroll" data-target="#toc">
      {{ partial "nav" . }}
@@ -70,4 +53,23 @@
    </div>
  </div>
 {{ template "_internal/google_analytics.html" . }}
-</body></html>
+   </body>
+     <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+ <script src="/js/holder.min.js" type='text/javascript'></script>
+<script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+  <script src="/highlight/highlight.pack.js" type='text/javascript'></script>
+  <script src="/highlight/highlightjs-line-numbers.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+    
+    hljs.initHighlightingOnLoad();
+    $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+    hljs.lineNumbersBlock(block);
+    });
+});
+  </script>
+
+</html>
