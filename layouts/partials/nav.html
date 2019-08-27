@@ -24,7 +24,7 @@
 {{ end }}
 
 	{{ $absURL:=.Permalink | absLangURL}}
-	<li {{ if eq $absURL "{{ .Site.BaseURL }}/tags/" }} class="active"  {{end}}> <a href="/tags/" >Tags</a></li>
+	<li {{ if eq .Title "Tags" }} class="active"  {{end}}> <a href="/tags/" >Tags</a></li>
       </ul>
 </nav>
 </header>
