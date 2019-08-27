@@ -13,12 +13,14 @@
 	  {{ if eq .Section "post" }}
 	  	  <div class="tags">	
 
+	      {{ with .Params.categories }}
 	    <p class="categories">
-<ion-icon name="folder"></ion-icon>
-	  {{ range .Params.categories }}
-	  <a class="btn btn-default btn-xs text-capitalize" href="/categories/{{ . | urlize }}"> {{ . }}</a>
-	  {{ end }}
+	      <ion-icon name="folder"></ion-icon>
+	      {{ range . }}
+	      <a class="btn btn-default btn-xs text-capitalize" href="/categories/{{ . | urlize }}"> {{ . }}</a>
+	      {{ end }}
 	    </p>
+	    {{ end }}
 	    {{ partial "post/tag/list" . }}
 	    	  </div>
 	    {{ end }}
