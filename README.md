@@ -34,6 +34,7 @@ googleAnalytics='google analytics code'
   tag = "tags"
 
 [params]
+  hljsStyle="atom-one-dark" #code highlightjs css style . See [Style List](https://github.com/highlightjs/highlight.js/tree/master/src/styles "CSS Style list")
   description = "site description"
   author = "your name"
   github ="github username"
