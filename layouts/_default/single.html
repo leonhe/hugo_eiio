@@ -24,7 +24,20 @@
 	    {{ partial "post/tag/list" . }}
 	    	  </div>
 	    {{ end }}
-
+<nav aria-label="...">
+  <ul class="pager">
+    {{if .PrevPage}}
+    <li class="previous">
+      <a href="{{.PrevPage.Permalink}}"><span aria-hidden="true">&larr;</span>{{.PrevPage.Title}}</a>
+      
+    </li>
+    	{{end}}
+     {{if .NextPage}}
+    
+    <li class="next"><a href="{{.NextPage.Permalink}}">{{.NextPage.Title}}<span aria-hidden="true">&rarr;</span></a></li>
+    {{ end }}
+  </ul>
+</nav>
 {{ template "_internal/disqus.html" . }}
       </div>
       </div></article>
