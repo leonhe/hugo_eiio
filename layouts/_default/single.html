@@ -38,8 +38,34 @@
     {{ end }}
   </ul>
 </nav>
+{{ if .Site.DisqusShortname }}
 {{ template "_internal/disqus.html" . }}
-      </div>
+{{ end }}
+
+{{ if .Site.Params.graphcomment }}
+<div id="graphcomment"></div>
+<script type="text/javascript">
+
+  /* - - - CONFIGURATION VARIABLES - - - */
+
+  // make sure the id is yours
+  window.gc_params = {
+      graphcomment_id: {{ .Site.Params.graphcomment }},
+
+    // if your website has a fixed header, indicate it's height in pixels
+    fixed_header_height: 0,
+  };
+
+  /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+  (function() {
+    var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+    gc.src = 'https://graphcomment.com/js/integration.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+  })();
+</script>
+{{ end }}
+     </div>
       </div></article>
 
 {{ end }}

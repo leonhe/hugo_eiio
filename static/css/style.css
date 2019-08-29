@@ -135,12 +135,11 @@
      * 
      * 	/\* your custom style here *\/
      * }
-     * 
-     * /\* for block of code *\/
-     * pre td.hljs-ln-code {
-     * 	padding-left: 10px;
-     * }
-     */ 
+*/
+      /\* for block of code *\/
+      pre td.hljs-ln-code {
+      	padding-left: 10px;
+      }
      blockquote {
     	font-weight: bold;
     	font-style: italic;
