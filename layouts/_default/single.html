@@ -4,11 +4,13 @@
       <article id='post' >
 	<div class='title'> {{ .Title }} </div>
 	  {{ if eq .Section "post" }}
-	  <span class="text-muted"><ion-icon name="ios-calendar"></ion-icon>Posted by:&nbsp;{{ .Date.Format "Mon Jan 2, 2006" }} | 
+	  <span class="text-muted"><ion-icon name="ios-calendar"></ion-icon>Posted by:&nbsp;{ <time tile="创建于" itemprop="dateCreated datePublished" datetime="{{ .Date.Format "Mon Jan 2, 2006" }}">{{ .Date.Format "Mon Jan 2, 2006" }}</time> | 
 	  <ion-icon name="ios-podium"></ion-icon>Word Count: {{ .WordCount }}&nbsp;&nbsp; | 
 	  <ion-icon name="ios-time"></ion-icon> Reading Time: {{ .ReadingTime }} Minute&nbsp;&nbsp;</span>
 {{ end }}
-	  {{ .Content }}
+	  <div  itemprop="articleBody">
+	    {{ .Content }}
+	    </div>
 
 	  {{ if eq .Section "post" }}
 	  	  <div class="tags">	
