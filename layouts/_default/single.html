@@ -8,9 +8,7 @@
 	  <ion-icon name="ios-podium"></ion-icon>Word Count: {{ .WordCount }}&nbsp;&nbsp; | 
 	  <ion-icon name="ios-time"></ion-icon> Reading Time: {{ .ReadingTime }} Minute&nbsp;&nbsp;</span>
 {{ end }}
-	  <div  itemprop="articleBody">
-	    {{ .Content }}
-	    </div>
+	  {{ .Content }}
 
 	  {{ if eq .Section "post" }}
 	  	  <div class="tags">	

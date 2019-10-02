@@ -309,3 +309,30 @@ a.list-group-item:hover, a.list-group-item:focus {
     box-sizing: border-box;
     border: 1px solid #e8e8e8;
 }
+#post img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+figcaption {
+    color: gray;
+    padding: 10px 0px 10px;
+text-align: center;
+    width: 100%;
+  display: table-caption;
+  caption-side: top;
+}
+
+figure {
+  display: table;
+}
