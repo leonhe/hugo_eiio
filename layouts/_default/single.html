@@ -26,17 +26,18 @@
 	    {{ end }}
 <nav aria-label="...">
   <ul class="pager">
+ {{if .NextPage}}
+    
+    <li class="previous"><a href="{{.NextPage.Permalink}}"><span aria-hidden="true">&larr;</span>{{.NextPage.Title}}</a></li>
+    {{ end }}
+
     {{if .PrevPage}}
-    <li class="previous">
-      <a href="{{.PrevPage.Permalink}}"><span aria-hidden="true">&larr;</span>{{.PrevPage.Title}}</a>
+    <li class="next">
+      <a href="{{.PrevPage.Permalink}}">{{.PrevPage.Title}}<span aria-hidden="true">&rarr;</span></a>
       
     </li>
     	{{end}}
-     {{if .NextPage}}
-    
-    <li class="next"><a href="{{.NextPage.Permalink}}">{{.NextPage.Title}}<span aria-hidden="true">&rarr;</span></a></li>
-    {{ end }}
-  </ul>
+      </ul>
 </nav>
 <script data-ad-client="ca-pub-0395730697845563"  async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
