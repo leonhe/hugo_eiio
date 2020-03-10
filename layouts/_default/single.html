@@ -52,7 +52,10 @@
 {{ if .Site.DisqusShortname }}
 {{ template "_internal/disqus.html" . }}
 {{ end }}
-
+{{ if .Site.Params.hasCommento }}
+ <div id="commento"></div>
+ <script src="https://cdn.commento.io/js/commento.js"></script>
+{{ end }}
 {{ if .Site.Params.graphcomment }}
 <div id="graphcomment"></div>
 <script type="text/javascript">
