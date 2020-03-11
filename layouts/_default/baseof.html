@@ -34,6 +34,9 @@
     $('div.src').each(function(i, block) {
 	hljs.highlightBlock(block);
     });
+$("code").each(function(){
+$(this).html("<ul><li>" + $(this).html().replace(/\n/g,"\n</li><li>") +"\n</li></ul>");
+});
 });
   </script>
 

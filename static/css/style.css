@@ -119,27 +119,43 @@
     }
 
     /* for block of numbers */
-    /* pre td.hljs-ln-numbers {
-     * 	-webkit-touch-callout: none;
-     * 	-webkit-user-select: none;
-     * 	-khtml-user-select: none;
-     * 	-moz-user-select: none;
-     * 	-ms-user-select: none;
-     * 	user-select: none;
-     * 
-     * 	text-align: center;
-     * 	color: #ccc;
-     * 	border-right: 1px solid #CCC;
-     * 	vertical-align: top;
-     * 	padding-right: 5px;
-     * 
-     * 	/\* your custom style here *\/
-     * }
-*/
-      /\* for block of code *\/
+    pre td.hljs-ln-numbers {
+    	-webkit-touch-callout: none;
+    	-webkit-user-select: none;
+    	-khtml-user-select: none;
+    	-moz-user-select: none;
+    	-ms-user-select: none;
+    	user-select: none;
+    	text-align: center;
+    	color: #ccc;
+    	border-right: 1px solid #CCC;
+    	vertical-align: top;
+    	padding-right: 5px;
+    
+    	/* your custom style here */
+    }
       pre td.hljs-ln-code {
       	padding-left: 10px;
       }
+
+
+.hljs ul {
+    list-style: decimal;
+    margin: 0px 0px 0 40px !important;
+    padding: 0px;
+}
+.hljs ul li {
+    list-style: decimal-leading-zero;
+    padding: 5px!important;
+    margin: 0 !important;
+    line-height: 14px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.hljs ul li:nth-of-type(even) {
+    color: inherit;
+}
+      
      blockquote {
     	font-weight: bold;
     	font-style: italic;
