@@ -9,7 +9,7 @@
     body {
 	padding-top: 25px;
 	padding-bottom: 0px;
-	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif
+	font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif,system-ui,  "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei"
 
     }
     
@@ -119,26 +119,18 @@
     }
 
     /* for block of numbers */
-    pre td.hljs-ln-numbers {
-    	-webkit-touch-callout: none;
-    	-webkit-user-select: none;
-    	-khtml-user-select: none;
-    	-moz-user-select: none;
-    	-ms-user-select: none;
-    	user-select: none;
-    	text-align: center;
-    	color: #ccc;
-    	border-right: 1px solid #CCC;
-    	vertical-align: top;
-    	padding-right: 5px;
     
-    	/* your custom style here */
-    }
-      pre td.hljs-ln-code {
-      	padding-left: 10px;
-      }
-
-
+.hljs {
+    border: 0;
+    font-family: "Consulas", "Courier New", Courier, mono, serif;
+    font-size: 12px;
+    display: block;
+    padding: 1px;
+    margin: 0;
+    width: 100%;
+    font-weight: 200;
+    white-space: pre-wrap
+}
 .hljs ul {
     list-style: decimal;
     margin: 0px 0px 0 40px !important;
@@ -146,6 +138,7 @@
 }
 .hljs ul li {
     list-style: decimal-leading-zero;
+    border-left: 1px solid #ddd !important;
     padding: 5px!important;
     margin: 0 !important;
     line-height: 14px;
@@ -155,8 +148,7 @@
 .hljs ul li:nth-of-type(even) {
     color: inherit;
 }
-      
-     blockquote {
+    blockquote {
     	font-weight: bold;
     	font-style: italic;
       border-left: 5px solid #ffa68c;
