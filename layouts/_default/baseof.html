@@ -31,10 +31,10 @@
   <script type="text/javascript">
     $(document).ready(function() {
 	hljs.initHighlightingOnLoad();
-    $('div.src').each(function(i, block) {
+    $('div src').each(function(i, block) {
 	hljs.highlightBlock(block);
     });
-$("div.src").each(function(){
+$("pre code").each(function(){
 $(this).html("<ul><li>" + $(this).html().replace(/\n/g,"\n</li><li>") +"\n</li></ul>");
 });
 });
@@ -63,7 +63,7 @@ $(this).html("<ul><li>" + $(this).html().replace(/\n/g,"\n</li><li>") +"\n</li><
  <div class="container footer">
   <div class="row">
     <div class="col-lg-10">
-      <small class="text-muted">{{ .Site.Copyright }} Theme:<a href="https://heyuanfei.com/">LeonHe</a></small>
+      <small class="text-muted">{{ .Site.Copyright }} Theme:<a href="https://hii8.com/">LeonHe</a></small>
     </div>
     <div class="col-lg-2">
       <small class="text-muted">{{ .Site.Params.footerRight}}</small>

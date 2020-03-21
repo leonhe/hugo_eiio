@@ -122,54 +122,54 @@
     
 .hljs {
     border: 0;
-    font-family: "Consulas", "Courier New", Courier, mono, serif;
     font-size: 12px;
     display: block;
-    padding: 1px;
-    margin: 0;
+    padding: 10px;
+    margin: 1px;
     width: 100%;
     font-weight: 200;
-    white-space: pre-wrap
+    white-space: pre-wrap;
+    color: #707070;
 }
 .hljs ul {
     list-style: decimal;
-    margin: 0px 0px 0 40px !important;
+    margin: 0px 0px 0px 40px !important;
     padding: 0px;
 }
 .hljs ul li {
     list-style: decimal-leading-zero;
-    border-left: 1px solid #ddd !important;
-    padding: 5px!important;
+    border-left: 1px solid #282a35 !important;
+    padding: 0 !important;
     margin: 0 !important;
-    line-height: 14px;
+    line-height: 18px;
     word-break: break-all;
     word-wrap: break-word;
 }
 .hljs ul li:nth-of-type(even) {
     color: inherit;
-}
-    blockquote {
-    	font-weight: bold;
-    	font-style: italic;
-      border-left: 5px solid #ffa68c;
+} 
+  blockquote { 
+    font-weight: bold;
+    font-style: italic;
+    border-left: 5px solid #ffa68c;
     display:block; 
-  background: #fff;
-  padding: 15px 20px 15px 45px;
-  margin: 0 0 20px;
-  position: relative;
- 
-  /*字体*/
-  font-family: Georgia, serif;
-  line-height: 1.2;
-  color: #666;
-  text-align: justify;
-  /*边框 - (选项)*/
-  border-right: 2px solid #ffa68c;
- 
-  /*盒子阴影 - (选项)*/
-  -moz-box-shadow: 2px 2px 8px #ccc;
-  -webkit-box-shadow: 2px 2px 8px #ccc;
-  box-shadow: 2px 2px 8px #ccc;
+    background: #fff;
+    padding: 15px 20px 15px 45px;
+    margin: 0 0 20px;
+    position: relative;
+    
+    /*字体*/
+    font-family: Georgia, serif;
+    line-height: 1.2;
+    color: #666;
+    text-align: justify;
+    /*边框 - (选项)*/
+    border-right: 2px solid #ffa68c;
+    
+    /*盒子阴影 - (选项)*/
+    -moz-box-shadow: 2px 2px 8px #ccc;
+    -webkit-box-shadow: 2px 2px 8px #ccc;
+    box-shadow: 2px 2px 8px #ccc;
 }
 blockquote::before{
   content: "\201C"; /*左双引号的Unicode编码*/
