@@ -343,4 +343,21 @@ text-align: center;
 
 figure {
   display: table;
+  margin-bottom: 20px;
+}
+
+figure.floatright {
+	max-width: 30%;
+	width: auto\9*0.3; /* ie8 */
+	height: auto;
+	float: right;
+	padding-left: 20px;
+}
+
+figure.floatleft {
+	max-width: 30%;
+	width: auto\9*0.3; /* ie8 */
+	height: auto;
+	float: left;
+	padding-right: 20px;
 }
