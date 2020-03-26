@@ -326,7 +326,7 @@ a.list-group-item:hover, a.list-group-item:focus {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin: 10px auto; 
+    margin: 0px auto; 
     display: block;
     text-align: center;
     vertical-align: middle;
