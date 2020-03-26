@@ -370,6 +370,12 @@ figure.floatleft {
 }
 
 .media {
-    padding: 10px;
+    padding: 0px 0px 0px 0px;
     border: 1px solid #e8e8e8;
+}
+
+.media-body {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
 }
