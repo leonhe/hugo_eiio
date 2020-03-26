@@ -31,12 +31,30 @@
       <div class="list-group">
 	{{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") }}
 	{{ range $paginator.Pages }}
-	
-	<a itemListElement  itemtype="http://schema.org/ListItem" itemscope   href="{{.Permalink}}" class="list-group-item">
-	  <span class="badge"  content="{{.Date.Format "Jan 02, 2006"}}" > {{.Date.Format "Jan 02, 2006"}}</span><span itemprop="name">{{.Title}}</span>
-	  <meta itemprop="url" content="{{.Permalink}}"/>
-</a>
-{{ end }}
+<div class="media">
+  {{ $url :=.Permalink }}
+{{ with .Param "header_images" }}
+    <div class="media-left">
+      <a href='{{$url}}'>
+        <img class="media-object" style="width:200px;height:200px;overflow: hidden" src="{{.}}" height="200px" alt=".">
+      </a>
+    </div>
+    {{ end }}
+ 
+   <div class="media-body">
+      <h3 class="media-heading"><a href="{{$url}}">{{ .Title }}</a></h3>
+      <p>  <span class="badge"  content="{{.Date.Format "Jan 02, 2006"}}" > {{.Date.Format "Jan 02, 2006"}}</span></p>
+      <p>  {{ .Summary | markdownify }}....</p>
+   {{ partial "post/tag/list" . }}
+    </div>
+
+  </div>
+<!-- 	<a href="{{.Permalink}}" class="list-group-item">
+ !-- 	  
+ !-- 	  <span class="badge"  content="{{.Date.Format "Jan 02, 2006"}}" > {{.Date.Format "Jan 02, 2006"}}</span><span itemprop="name">{{.Title}}</span>
+ !-- 	  <meta itemprop="url" content="{{.Permalink}}"/>
+ !-- </a> -->
+ {{ end }} 
       </div>
       {{ template "_internal/pagination.html" . }}
     </div>

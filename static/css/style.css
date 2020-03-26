@@ -50,7 +50,7 @@
 	border-top: 1px solid #ddd;
 	display: block;
 	padding:10px 0 10px 0;
-	clear:both;
+	clear: none;
     }
     li {
 	line-height: 26px;
@@ -245,6 +245,9 @@ td {
     padding-left: 10px;   
     color: #888;
 }
+a{
+    color: #888;
+}
 a:hover {
     color: #ed8143;
 }
@@ -326,7 +329,7 @@ a.list-group-item:hover, a.list-group-item:focus {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin: 0px auto; 
+    margin: 10px auto; 
     display: block;
     text-align: center;
     vertical-align: middle;
@@ -363,4 +366,9 @@ figure.floatleft {
 	height: auto;
 	padding-right: 20px;
 	float: left !important;
+}
+
+.media {
+    padding: 10px;
+    border: 1px solid #e8e8e8;
 }
