@@ -50,6 +50,7 @@
 	border-top: 1px solid #ddd;
 	display: block;
 	padding:10px 0 10px 0;
+	clear:both;
     }
     li {
 	line-height: 26px;
@@ -353,6 +354,7 @@ figure.floatright {
 	height: auto;
 	padding-left: 20px;
 	float: right !important;
+	clear: none;
 }
 
 figure.floatleft {
