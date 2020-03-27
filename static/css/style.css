@@ -369,13 +369,22 @@ figure.floatleft {
 	float: left !important;
 }
 
-.media {
-    padding: 0px 0px 0px 0px;
+#home_post .col-md-3{
+    padding-left:0px;
+    text-align:center;
+    padding-right:0px;
+}
+#home_post {
+     padding: 0px 0px 0px 0px;
     border: 1px solid #e8e8e8;
+    margin: 10px;
+    display: block;
+}
+#home_post p{
+    line-height: 22px;
+    color: #888;
 }
 
-.media-body {
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 10px;
+#home_post span{
+    font-size: 12px;
 }
