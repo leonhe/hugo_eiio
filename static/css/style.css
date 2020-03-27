@@ -369,9 +369,20 @@ figure.floatleft {
 	float: left !important;
 }
 
+.image-container {
+    max-height:350px;
+    vertical-align : middle;
+    overflow: hidden;
+    width: 100%;
+    height:auto;
+    left:50%;
+    position: relative;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+}
 #home_post .col-md-3{
     padding-left:0px;
-    text-align:center;
     padding-right:0px;
 }
 #home_post {
