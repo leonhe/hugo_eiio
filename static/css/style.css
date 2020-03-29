@@ -50,7 +50,7 @@
 	border-top: 1px solid #ddd;
 	display: block;
 	padding:10px 0 10px 0;
-	clear: none;
+	clear: both;
     }
     li {
 	line-height: 26px;
@@ -370,11 +370,10 @@ figure.floatleft {
 }
 
 .image-container {
-    max-height:350px;
     vertical-align : middle;
     overflow: hidden;
     width: 100%;
-    height:auto;
+    height:260px;
     left:50%;
     position: relative;
     -webkit-transform: translateX(-50%);
