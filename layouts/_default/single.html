@@ -24,7 +24,8 @@
 	    {{ partial "post/tag/list" . }}
 	    	  </div>
 	    {{ end }}
-<nav aria-label="...">
+		  {{ if .Site.Params.ShowNextAndPrePost }}
+<nav>
   <ul class="pager">
  {{if .NextPage}}
     
@@ -39,6 +40,7 @@
     	{{end}}
       </ul>
 </nav>
+{{ end }}
 <script data-ad-client="ca-pub-0395730697845563"  async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;margin-bottom: 20px;"

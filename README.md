@@ -35,6 +35,8 @@ googleAnalytics='google analytics code'
 
 [params]
   hljsStyle="atom-one-dark" #code highlightjs css style . See [Style List](https://github.com/highlightjs/highlight.js/tree/master/src/styles "CSS Style list")
+
+  showNextAndPrePost = false #Is Show Next and Previous Post Button
   description = "site description"
   author = "your name"
   github ="github username"
