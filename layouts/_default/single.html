@@ -24,24 +24,40 @@
 	    {{ partial "post/tag/list" . }}
 	    	  </div>
 	    {{ end }}
-<nav aria-label="...">
+		  {{ if .Site.Params.ShowNextAndPrePost }}
+<nav>
   <ul class="pager">
+ {{if .NextPage}}
+    
+    <li class="previous"><a href="{{.NextPage.Permalink}}"><span aria-hidden="true">&larr;</span>{{.NextPage.Title}}</a></li>
+    {{ end }}
+
     {{if .PrevPage}}
-    <li class="previous">
-      <a href="{{.PrevPage.Permalink}}"><span aria-hidden="true">&larr;</span>{{.PrevPage.Title}}</a>
+    <li class="next">
+      <a href="{{.PrevPage.Permalink}}">{{.PrevPage.Title}}<span aria-hidden="true">&rarr;</span></a>
       
     </li>
     	{{end}}
-     {{if .NextPage}}
-    
-    <li class="next"><a href="{{.NextPage.Permalink}}">{{.NextPage.Title}}<span aria-hidden="true">&rarr;</span></a></li>
-    {{ end }}
-  </ul>
+      </ul>
 </nav>
+{{ end }}
+<script data-ad-client="ca-pub-0395730697845563"  async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;margin-bottom: 20px;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-0395730697845563"
+     data-ad-slot="6342580713"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 {{ if .Site.DisqusShortname }}
 {{ template "_internal/disqus.html" . }}
 {{ end }}
-
+{{ if .Site.Params.hasCommento }}
+ <div id="commento"></div>
+ <script src="https://cdn.commento.io/js/commento.js"></script>
+{{ end }}
 {{ if .Site.Params.graphcomment }}
 <div id="graphcomment"></div>
 <script type="text/javascript">
