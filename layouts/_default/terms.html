@@ -10,6 +10,11 @@
 <div class="terms-tags">
 {{ range .Data.Terms.ByCount }}
 {{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
+
+{{ $special_word := dict "#" "%23" }}
+{{ range  $elem_key,$elem_val := $special_word }}
+{{ $termLink = replace $termLink $elem_key $elem_val }}
+{{ end }}
     <a class="terms-link" href="{{ $termLink }}">{{ .Term }}<em class="terms-count">{{ .Count }}</em>
 </a>
     <!-- <ul>
