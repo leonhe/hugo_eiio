@@ -8,7 +8,6 @@
 	    <a target="_blank"   href="https://twitter.com/{{ .Site.Params.twitter }}"><ion-icon name="logo-twitter"></ion-icon></a>
 	    <a target="_blank"   href="mailto:{{ .Site.Params.email }}"><ion-icon name="ios-mail"></ion-icon></a>
 
-
 	   <a target="_blank"   href="https://github.com/{{ .Site.Params.github }}"><ion-icon name="logo-github"></ion-icon></a>
 
 	   <a target="_blank" class="rss"  href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}"><ion-icon name="logo-rss"></ion-icon></a>
@@ -17,7 +16,7 @@
   {{ range $key, $value := .Site.Taxonomies }}
     {{ if eq $key "categories" }}
 <p class="categories"><ion-icon name="folder"></ion-icon>
-      {{ range first 10 $value.ByCount }}<a class="btn btn-default btn-xs text-capitalize" href="/{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a>&nbsp;{{ end }}
+      {{ range first 10 $value.ByCount }}<a class="btn btn-default btn-xs text-capitalize" href="/{{ $key }}/{{ replace .Name "#" "%23" }}/">{{ .Name }}</a>&nbsp;{{ end }}
 </p>
   {{ end }}
   {{ end }}

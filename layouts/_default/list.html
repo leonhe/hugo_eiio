@@ -6,7 +6,6 @@
 	<hr/>
 	{{ range .Data.Pages.GroupByDate "2006" }}
 	<h3>{{ .Key }}</h3>
-	<div itemscorpe itemtype="http://schema.org/ItemList" itemListElement>
 	<ul>
 	  {{ range .Pages }}
 	  <li>{{.Date.Format "Mon, Jan 2, 2006" }}&nbsp;<a itemListElement  itemtype="http://schema.org/ListItem" href="{{.Permalink}}">
@@ -15,7 +14,7 @@
 	    <meta  itemprop="url" content="{{.Permalink}}"/>
 	  </li>
 	  {{ end }}
-	</ul></div>
+	</ul>
 	{{ end }}
 	<hr/>
 	{{ partial "addthis" . }}

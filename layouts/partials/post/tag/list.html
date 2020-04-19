@@ -1,4 +1,5 @@
 {{ with .Params.tags }}
-<p><ion-icon name="pricetag"></ion-icon>  {{ delimit (apply (apply (sort .) "partial" "post/tag/link" ".") "chomp" ".") " " }}</p>
+
+<p><ion-icon name="pricetag"></ion-icon> {{ delimit (apply (apply (sort .) "partial" "post/tag/link" ".") "chomp" ".") " " }}</p>
 
 {{ end }}
