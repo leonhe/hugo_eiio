@@ -44,7 +44,7 @@
     {{ end }}
 
       <h3 ><a class="title_a" href="{{$url}}">{{ .Title }}</a></h3>
-      <p>  <span class="badge"  content="{{.Date.Format "Jan 02, 2006"}}" > {{.Date.Format "Jan 02, 2006"}}</span></p>
+      <p>  <span class="badge"  time="{{.Date.Format "2006-01-02"}}" > {{.Date.Format "2006-01-02"}}</span></p>
       <p><span><ion-icon name="ios-podium"></ion-icon>Word Count: {{ .WordCount }}&nbsp;&nbsp; | 
 	  <ion-icon name="ios-time"></ion-icon> Reading Time: {{ .ReadingTime }} Minute&nbsp;&nbsp;</span></p>
       <p><a href="{{$url}}" class="title_a">  {{ .Summary | markdownify }}....</a></p>
