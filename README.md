@@ -4,7 +4,7 @@ This is a [hugo](https://gohugo.io/) static blog engine theme, if you like this 
 
 ![screenshot](https://raw.githubusercontent.com/leonhe/hugo_eiio/master/images/screenshot.png)
 
-[See Demo](https://hii8.com)
+[See Demo](https://heyuanfei.com)
 
 # Installation
 Inside the folder of your Hugo site run:
