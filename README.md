@@ -29,6 +29,10 @@ PaginatePath="page"
 pygmentsuseclasses = true
 disqusShortname = "user id"
 googleAnalytics='google analytics code'
+
+preserveTaxonomyNames = false
+disablePathToLower = true
+hasCJKLanguage = true
 [taxonomies]
   category = "categories"
   tag = "tags"

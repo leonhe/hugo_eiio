@@ -1,1 +1,7 @@
-<a itemprop="keywords"  class="label label-danger" href="/tags/{{ . | urlize }}">{{ . }}</a>
+ {{ $formatName := .  }}
+{{ $special_word := dict "#" "%23" }}
+{{ range  $elem_key,$elem_val := $special_word }}
+{{ $formatName = replace $formatName $elem_key $elem_val }}
+{{ end }}
+ 
+<a itemprop="keywords"  class="label label-danger" href="/tags/{{ $formatName }}/">{{ . }}</a>

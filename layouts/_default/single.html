@@ -17,7 +17,13 @@
 	    <p class="categories">
 	      <ion-icon name="folder"></ion-icon>
 	      {{ range . }}
-	      <a class="btn btn-default btn-xs text-capitalize" href="/categories/{{ . | urlize }}"> {{ . }}</a>
+{{ $namec := . }}
+{{ $special_word := dict "#" "%23" }}
+{{ range  $elem_key,$elem_val := $special_word }}
+{{ $namec = replace $namec $elem_key $elem_val }}
+{{ end }}
+ 
+	      <a class="btn btn-default btn-xs text-capitalize" href="/categories/{{ $namec }}/"> {{ . }}</a>
 	      {{ end }}
 	    </p>
 	    {{ end }}
