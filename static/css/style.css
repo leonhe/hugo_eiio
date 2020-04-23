@@ -122,35 +122,6 @@ font-family: Menlo,Monaco,Consolas,"Courier New",monospace
     }
 
     /* for block of numbers */
-    
-.hljs {
-    border: 0;
-    font-size: 12px;
-    display: block;
-    padding: 10px;
-    margin: 1px;
-    width: 100%;
-    font-weight: 200;
-    white-space: pre-wrap;
-    color: #707070;
-}
-.hljs ul {
-    list-style: decimal;
-    margin: 0px 0px 0px 40px !important;
-    padding: 0px;
-}
-.hljs ul li {
-    list-style: decimal-leading-zero;
-    border-left: 1px solid #282a35 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    line-height: 18px;
-    word-break: break-all;
-    word-wrap: break-word;
-}
-.hljs ul li:nth-of-type(even) {
-    color: inherit;
-} 
   blockquote { 
     font-weight: bold;
     font-style: italic;
