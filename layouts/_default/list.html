@@ -8,8 +8,7 @@
 	<h3>{{ .Key }}</h3>
 	<ul>
 	  {{ range .Pages }}
-	  <li>{{.Date.Format "01/02" }}&nbsp;<a itemListElement  itemtype="http://schema.org/ListItem" href="{{.Permalink}}">
-	      <span itemprop="name">{{ .Title }}</span></a>
+	  <li>{{.Date.Format "01/02" }}&nbsp;<a  href="{{.Permalink}}">{{ .Title }}</a>
 	    <meta itemprop="datePublished"  content="{{.Date.Format "Jan 02, 2006"}}" />
 	    <meta  itemprop="url" content="{{.Permalink}}"/>
 	  </li>
