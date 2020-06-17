@@ -16,7 +16,7 @@
 	{{ $siteURL:= "/" | absLangURL }}
 	
 	<li {{ if eq $url $siteURL }} class="active"  {{end}} ><a href="/">Home</a></li>
-	<li {{ if eq .Title "Posts" }} class="active"  {{end}}> <a href="/post/" >Posts/a></li>
+	<li {{ if eq .Title "Posts" }} class="active"  {{end}}> <a href="/post/" >Posts</a></li>
 	{{ range where site.RegularPages "Type" "in" site.Params.mainSections }}
 	{{ if isset .Params "title" }}
 	{{ $absURL:=.Permalink | absLangURL}}
