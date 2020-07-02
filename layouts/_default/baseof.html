@@ -4,9 +4,9 @@
    <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="XN4YmHgE76jTp2kNQ9qnsVSApl6yIQBzdyLe0BnbFks" />
+  <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
   <meta name="Description" content="{{ .Site.Params.description }}">
-  <meta name="author"      content="{{ .Site.Params.author}}">
+  <meta name="author"      content="{{ .Site.Params.author}} <{{ .Site.Params.email}}>">
   <meta name="keywords"    content="{{ .Site.Params.keywords}}">
   <title>
     {{ if .IsHome }}
