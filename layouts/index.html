@@ -2,14 +2,12 @@
 	            <!--- icon container --->
     <div class="panel panel-default">
       <div class="panel-body">
-	<div>
 	 <span class="text-primary"><ion-icon name="paw"></ion-icon>{{ .Site.Params.description}}</span>
 	 <div class="pull-right">
 	    <a target="_blank"   href="https://twitter.com/{{ .Site.Params.twitter }}"><ion-icon name="logo-twitter"></ion-icon></a>
 	    <a target="_blank"   href="mailto:{{ .Site.Params.email }}"><ion-icon name="ios-mail"></ion-icon></a>
 	   <a target="_blank"   href="https://github.com/{{ .Site.Params.github }}"><ion-icon name="logo-github"></ion-icon></a>
 	   <a target="_blank" class="rss"  href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}"><ion-icon name="logo-rss"></ion-icon></a>
-	 </div>
 	</div>
   {{ range $key, $value := .Site.Taxonomies }}
     {{ if eq $key "categories" }}
@@ -30,14 +28,13 @@
 	
 	{{ range $paginator.Pages }}
   {{ $url :=.Permalink }}
-	<div id="home_post" class="row">
+	<div id="home_post" class="row" >
 	    {{ with .Param "header_images" }}
-	  <div class="col-md-3">
+	  <div class="col-md-3" >
 	    <a href='{{$url}}'>
 	      <img class="image-container"  src="{{.}}">
       </a>
 	   </div>
-
 	  <div class="col-md-9">
     {{ else }}
 	  <div class="col-md-12">
@@ -52,13 +49,7 @@
 	    
 	  </div>
 	  </div>
-<!-- 	<a href="{{.Permalink}}" class="list-group-item">
- !-- 	  
- !-- 	  <span class="badge"  content="{{.Date.Format "Jan 02, 2006"}}" > {{.Date.Format "Jan 02, 2006"}}</span><span itemprop="name">{{.Title}}</span>
- !-- 	  <meta itemprop="url" content="{{.Permalink}}"/>
- !-- </a> -->
  {{ end }} 
-
       {{ template "_internal/pagination.html" . }}
       </div>
 	</div>
