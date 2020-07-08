@@ -48,7 +48,7 @@
 	      {{ range . }}
 	      <a class="btn btn-default btn-xs text-capitalize" href="/categories/{{ . | urlize }}"> {{ . }}</a>
 	      {{ end }}
- |
+	      | 
 	    {{ end }} 
 	<span><ion-icon name="ios-podium"></ion-icon>Word Count: {{ .WordCount }}&nbsp;&nbsp; | 
 	  <ion-icon name="ios-time"></ion-icon> Reading Time: {{ .ReadingTime }} Minute&nbsp;&nbsp;</span>
