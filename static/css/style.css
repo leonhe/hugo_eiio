@@ -26,15 +26,15 @@ font-family: Menlo,Monaco,Consolas,"Courier New",monospace
     border: 0px solid #ccc;
     	border-radius: 0px;
     }
-pre code {
-    font-size: inherit;
-    white-space: inherit;
-}
+
 
 .articleBody {
 padding:10px 0 10px 0;
  }
 
+pre code {
+    white-space: inherit;
+}
 
 .articleBody p {
     line-height:26px;
