@@ -1,12 +1,10 @@
 # Hugo blog theme 
 
-✍️  🎨
-
 This is a [hugo](https://gohugo.io/) static blog engine theme, if you like 😍 💗 this theme,please give me star🌟🌟  ~_~
 
 ## Features
  
-	- ✏️ Blog ️
+	- ✍ Blog ️
 	- 🎩 Modern、Responsive
 	- 🅾️ Syntax highlight
 	- Emoji 😄 ,Disqus 🌐
