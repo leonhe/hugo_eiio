@@ -7,7 +7,7 @@ This is a [hugo](https://gohugo.io/) static blog engine theme, if you like 😍 
 - 🎩 Modern、Responsive
 - 🅾️ Syntax highlight
 - Emoji 😄 ,Disqus 🌐
-- 🏙🎇🌆 Post thumbnail images
+- 🏙 🎇 🌆 Post thumbnail images
 
 [See Demo](https://heyuanfei.com)
 
