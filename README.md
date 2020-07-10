@@ -1,19 +1,23 @@
-# Hugo blog theme
+# Hugo blog theme 
 
-This is a [hugo](https://gohugo.io/) static blog engine theme, if you like this theme,please give me star  ~_~
+✍️🎨
 
-![screenshot](https://raw.githubusercontent.com/leonhe/hugo_eiio/master/images/screenshot.png)
+This is a [hugo](https://gohugo.io/) static blog engine theme, if you like 😍💗 this theme,please give me star🌟🌟  ~_~
+
+## Features
+ 
+	- ✏️Blog ️
+	- 🎩 👄💃Modern、Responsive
+	- 🅾️Syntax highlight
+	- Emoji😄,Disqus🌐
+	- 🏙🎇🌆Post thumbnail images
 
 [See Demo](https://heyuanfei.com)
 
-# Features
- 
-	- Blog
-	- Modern、Responsive
-	- Syntax highlight
-	- Emoji😄,Disqus
-	- Post thumbnail images
-	
+# Screenshot
+![screenshot](https://raw.githubusercontent.com/leonhe/hugo_eiio/master/images/screenshot.png)
+
+
 # Installation
 Inside the folder of your Hugo site run:
 
