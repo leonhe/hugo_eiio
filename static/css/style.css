@@ -27,9 +27,8 @@ font-family: Menlo,Monaco,Consolas,"Courier New",monospace
     	border-radius: 0px;
     }
 
-
 .articleBody {
-padding:10px 0 10px 0;
+    padding:10px 0 10px 0;
  }
 
 pre code {
