@@ -11,9 +11,8 @@ This is a [hugo](https://gohugo.io/) static blog engine theme, if you like 😍 
 
 [See Demo](https://heyuanfei.com)
 
-# Screenshot
-![screenshot](https://raw.githubusercontent.com/leonhe/hugo_eiio/master/images/screenshot.png)
-
+<!-- # Screenshot
+ !-- ![screenshot](https://raw.githubusercontent.com/leonhe/hugo_eiio/master/images/screenshot.png) -->
 
 # Installation
 Inside the folder of your Hugo site run:
