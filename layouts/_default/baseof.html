@@ -60,9 +60,9 @@
 <!-- start footer --->
  <div class="container footer">
   <div class="row">
-    <div class="col-lg-12">
-      <small class="text-muted">{{ .Site.Copyright }} Theme:<a href="https://heyuanfei.com/">LeonHe</a></small>
-      <small class="text-muted"><a href='http://www.beian.miit.gov.cn/' />{{ .Site.Params.footerRight}}</a></small>
+    <div class="col-lg-10">
+      <small class="text-muted pull-left">{{ .Site.Copyright }} Theme:<a href="https://heyuanfei.com/">LeonHe</a></small>
+      <small class="pull-right">{{ .Site.Params.footerRight | safeHTML }}</small>
     </div>
    </div>
  </div>
