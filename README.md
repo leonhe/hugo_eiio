@@ -1,16 +1,16 @@
 # Hugo blog theme 
 
-✍️🎨
+✍️  🎨
 
-This is a [hugo](https://gohugo.io/) static blog engine theme, if you like 😍💗 this theme,please give me star🌟🌟  ~_~
+This is a [hugo](https://gohugo.io/) static blog engine theme, if you like 😍 💗 this theme,please give me star🌟🌟  ~_~
 
 ## Features
  
-	- ✏️Blog ️
-	- 🎩 👄💃Modern、Responsive
-	- 🅾️Syntax highlight
-	- Emoji😄,Disqus🌐
-	- 🏙🎇🌆Post thumbnail images
+	- ✏️ Blog ️
+	- 🎩 Modern、Responsive
+	- 🅾️ Syntax highlight
+	- Emoji 😄 ,Disqus 🌐
+	- 🏙🎇🌆 Post thumbnail images
 
 [See Demo](https://heyuanfei.com)
 
