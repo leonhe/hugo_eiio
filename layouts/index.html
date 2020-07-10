@@ -2,6 +2,7 @@
 	            <!--- icon container --->
     <div class="panel panel-default">
       <div class="panel-body">
+	<p class="pull-left">
 	 <span class="text-primary"><ion-icon name="paw"></ion-icon>{{ .Site.Params.description}}</span>
 	 <div class="pull-right">
 	    <a target="_blank"   href="https://twitter.com/{{ .Site.Params.twitter }}"><ion-icon name="logo-twitter"></ion-icon></a>
@@ -9,9 +10,10 @@
 	   <a target="_blank"   href="https://github.com/{{ .Site.Params.github }}"><ion-icon name="logo-github"></ion-icon></a>
 	   <a target="_blank" class="rss"  href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}"><ion-icon name="logo-rss"></ion-icon></a>
 	</div>
+	</p>
   {{ range $key, $value := .Site.Taxonomies }}
     {{ if eq $key "categories" }}
-<p class="categories"><ion-icon name="folder"></ion-icon>
+<p class="home-categories"><ion-icon name="folder"></ion-icon>
       {{ range first 10 $value.ByCount }}<a class="btn btn-default btn-xs text-capitalize" href="/{{ $key }}/{{ replace .Name "#" "%23" }}/">{{ .Name }}</a>&nbsp;{{ end }}
 </p>
   {{ end }}

@@ -340,17 +340,24 @@ figure.floatleft {
 	float: left !important;
 }
 
+p.home-categories {
+    margin-bottom: 0px;
+    margin-top: 5px;
+clear: both;
+
+}
+
 .image-container {
     vertical-align : middle;
-    overflow: hidden;
-    width: 100%;
-    height:260px;
-    left:50%;
-    position: relative;
+overflow: hidden;
+width: 100%;
+height:260px;
+left:50%;
+position: relative;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
-}
+ }
 #home_post .col-md-3{
     padding-left:0px;
     padding-right:0px;
