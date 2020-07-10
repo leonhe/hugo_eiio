@@ -70,7 +70,7 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 ```
-# Post thumbnail image setting
+# Use post's thumbnail 
 
 
 ## Home thumbnail of post:
