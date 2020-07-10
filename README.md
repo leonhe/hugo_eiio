@@ -6,6 +6,14 @@ This is a [hugo](https://gohugo.io/) static blog engine theme, if you like this 
 
 [See Demo](https://heyuanfei.com)
 
+# Features
+ 
+	- Blog
+	- Modern、Responsive
+	- Syntax highlight
+	- Emoji😄,Disqus
+	- Post thumbnail images
+	
 # Installation
 Inside the folder of your Hugo site run:
 
@@ -20,41 +28,74 @@ Modify your configuration:
 ```
 baseurl = "site url"
 title = "Site Name"
-languageCode = "zh-CN"
+languageCode = "site language code"
 copyright = "Copyright right infomation."
 themesdir = "themes"
 theme = "hugo_eiio"
 Paginate=15 
+MetaDataFormat = "toml"
 PaginatePath="page"
 pygmentsuseclasses = true
 disqusShortname = "user id"
 googleAnalytics='google analytics code'
 
-preserveTaxonomyNames = false
-disablePathToLower = true
 hasCJKLanguage = true
+preserveTaxonomyNames = false
+disablePathToLower =false 
+enableEmoji = true
+enableInlineShortcodes = true
+enableRobotsTXT = true
+
 [taxonomies]
   category = "categories"
   tag = "tags"
-
+  summaryLength = 250 # default 70
 [params]
-  hljsStyle="atom-one-dark" #code highlightjs css style . See [Style List](https://github.com/highlightjs/highlight.js/tree/master/src/styles "CSS Style list")
+  hljsStyle="github" #code highlightjs css style . See [Style List](https://github.com/highlightjs/highlight.js/tree/master/src/styles "CSS Style list")
 
   showNextAndPrePost = false #Is Show Next and Previous Post Button
   description = "site description"
+  keywords = "site keywords use seo"
+  googleSiteVerification = "google site verification key"
   author = "your name"
   github ="github username"
   email="your email"
   twitter="your twitter name" 
   securityPolicy = false #disable https content security policy
   footerRight="Your tips content" #footer right content
-  addthisID="addthis.com sharder plugin id"
   mainSections = ['page']
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
   filename = "sitemap.xml"
 
+```
+# Post thumbnail image setting
+
+
+## Home thumbnail of post:
+
+if you need in home page list display thumbnail of post,write head of post keywords,see below code👇:
+
+```
+
++++
+title = "Post Title"
+categories = ["Categories"]
+tags = ["tags"]
+date = "write datetime"
+draft = false
+header_images="post home list thumbnail"
++++
+..............
+```
+
+## Content thumbnail of post:
+
+if you need in post content to display different thumbnail,see below code 👇
+
+```
+{{< figure  class="floatright|floatleft" src="your image path" alt="" >}}
 ```
 
 # License
