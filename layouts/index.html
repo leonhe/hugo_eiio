@@ -33,9 +33,11 @@
 	<div id="home_post" class="row" >
 	    {{ with .Param "header_images" }}
 	  <div class="col-md-3" >
+	    <div class="cover">
 	    <a href='{{$url}}'>
 	      <img class="image-container"  src="{{.}}">
-      </a>
+	    </a>
+	    </div>
 	   </div>
 	  <div class="col-md-9">
     {{ else }}

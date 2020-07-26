@@ -349,14 +349,24 @@ clear: both;
 .image-container {
     vertical-align : middle;
 overflow: hidden;
-width: 100%;
-height:260px;
+width: auto;
+height:100%;
 left:50%;
 position: relative;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
  }
+
+.cover
+{
+width: 100%;
+height: 260px;
+overflow: hidden;
+border: 0px solid cornflowerblue;
+position: relative;
+}
+
 #home_post .col-md-3{
     padding-left:0px;
     padding-right:0px;
