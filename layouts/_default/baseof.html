@@ -31,7 +31,7 @@
   <script src="/js/bootstrap.min.js"></script>
  <script src="/js/holder.min.js" type='text/javascript'></script>
 <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
-  <script type="text/javascript">
+ <script type="text/javascript">
     $(document).ready(function() {
 	hljs.initHighlightingOnLoad();
 	$('pre code').each(function(i, block) {
@@ -44,15 +44,15 @@
   <link rel="canonical" href="{{ .Permalink }}">
   <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
    </head>
-   <body data-spy="scroll" data-target="#toc">
+   <body>
      {{ partial "nav" . }}
      <div class="jumbotron masthead" role="main">
        <div class="container">
 	 <div class="row">
  	   <div class="col-lg-10">
 	   {{ block "main" . }}
-      <!-- The part of the page that begins to differ between templates -->
-      {{ end }}
+	   <!-- The part of the page that begins to differ between templates -->
+	   {{ end }}
 	 </div>
 
 	 </div>

@@ -385,3 +385,20 @@ position: relative;
 #home_post span{
     font-size: 12px;
 }
+
+#toc {
+    border-radius: 10px;
+    float: right;
+border:1px solid;
+    border-color:#c1c1c1;
+padding: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#toc h2 {
+padding:0px 0px 15px 0px;
+    
+margin: 0px;
+
+}
