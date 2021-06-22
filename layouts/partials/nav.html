@@ -15,7 +15,7 @@
       <ul class="nav navbar-nav">
 	{{ $siteURL:= "/" | absLangURL }}
 	{{ range .Site.Menus.main }}
-	<li {{ if eq .URL $siteURL }} class="active"  {{end}} ><a href="{{.URL}}">{{.Name}}</a></li>
+	<li {{ if eq .URL $siteURL }} class="active"  {{end}} ><a href="{{.URL}}" rel="nofollow">{{.Name}}</a></li>
 	{{ end }}
 	
 <!-- 	<li {{ if eq $url $siteURL }} class="active"  {{end}} ><a href="/">Home</a></li>
