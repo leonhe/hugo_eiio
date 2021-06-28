@@ -1,71 +1,77 @@
 {{ define "main" }}
-	            <!--- icon container --->
-    <div class="panel panel-default">
-      <div class="panel-body">
-	<p class="pull-left">
-	 <span class="text-primary"><ion-icon name="paw"></ion-icon>{{ .Site.Params.description}}</span>
-	 <div class="pull-right">
-	    <a target="_blank"   href="https://twitter.com/{{ .Site.Params.twitter }}"><ion-icon name="logo-twitter"></ion-icon></a>
-	    <a target="_blank"   href="mailto:{{ .Site.Params.email }}"><ion-icon name="ios-mail"></ion-icon></a>
-	   <a target="_blank"   href="https://github.com/{{ .Site.Params.github }}"><ion-icon name="logo-github"></ion-icon></a>
-	   <a target="_blank" class="rss"  href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}"><ion-icon name="logo-rss"></ion-icon></a>
-	</div>
-	</p>
-  {{ range $key, $value := .Site.Taxonomies }}
-    {{ if eq $key "categories" }}
-<p class="home-categories"><ion-icon name="folder"></ion-icon>
-      {{ range first 10 $value.ByCount }}<a class="btn btn-default btn-xs text-capitalize" href="/{{ $key }}/{{ replace .Name "#" "%23" }}/">{{ .Name }}</a>&nbsp;{{ end }}
-</p>
-  {{ end }}
-  {{ end }}
-      </div>
-    </div>    
+<!--- icon container --->
+<div class="panel panel-default">
+    <div class="panel-body">
+        <p class="pull-left">
+            <span class="text-primary">
+                <ion-icon name="paw"></ion-icon>{{ .Site.Params.description}}
+            </span>
+            <div class="pull-right">
+                <a target="_blank" href="https://twitter.com/{{ .Site.Params.twitter }}">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a target="_blank" href="mailto:{{ .Site.Params.email }}">
+                    <ion-icon name="ios-mail"></ion-icon>
+                </a>
+                <a target="_blank" href="https://github.com/{{ .Site.Params.github }}">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a target="_blank" class="rss" href="{{ with .OutputFormats.Get " RSS " }}{{ .RelPermalink }}{{ end }}">
+                    <ion-icon name="logo-rss"></ion-icon>
+                </a>
+            </div>
+        </p>
+        {{ range $key, $value := .Site.Taxonomies }} {{ if eq $key "categories" }}
+        <p class="home-categories">
+            <ion-icon name="folder"></ion-icon>
+            {{ range first 10 $value.ByCount }}<a class="btn btn-default btn-xs text-capitalize" href="/{{ $key }}/{{ replace .Name " # " " %23 " }}/">{{ .Name }}</a>&nbsp;{{ end }}
+        </p>
+        {{ end }} {{ end }}
+    </div>
+</div>
 <!-- post list --->
-    <div class="panel panel-default">
+<div class="panel panel-default">
     <div class="panel-heading">
-      <span class="glyphicon glyphicon-list-alt"></span>&nbsp;<b>Posts</b>
+        <span class="glyphicon glyphicon-list-alt"></span>&nbsp;<b>Posts</b>
     </div>
     <div class="panel-body">
-	{{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") }}
-	
-	{{ range $paginator.Pages }}
-  {{ $url :=.Permalink }}
-	<div id="home_post" class="row" >
-	    {{ with .Param "header_images" }}
-	  <div class="col-md-3" >
-	    <div class="cover">
-	    <a href='{{$url}}'>
-	      <img class="image-container"  src="{{.}}">
-	    </a>
-	    </div>
-	   </div>
-	  <div class="col-md-9">
-    {{ else }}
-	  <div class="col-md-12">
-    {{ end }}
+        {{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") }} {{ range $paginator.Pages }} {{ $url :=.Permalink }}
+        <div id="home_post" class="row">
+            {{ with .Param "header_images" }}
+            <div class="col-md-3">
+                <div class="cover">
+                    <a href='{{$url}}'>
+                        <img class="image-container" src="{{.}}">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                {{ else }}
+                <div class="col-md-12">
+                    {{ end }}
 
-      <h3 ><a class="title_a" href="{{$url}}">{{ .Title }}</a></h3>
-      <p>  <span class="badge"  time="{{.Date.Format "2006-01-02"}}" > {{.Date.Format "2006-01-02"}}</span>  </p>
-    <p>
-{{ with .Params.categories }}
-	      <ion-icon name="folder"></ion-icon>
-	      {{ range . }}
-	      <a class="btn btn-default btn-xs text-capitalize" href="/categories/{{ . | urlize }}"> {{ . }}</a>
-	      {{ end }}
-	      | 
-	    {{ end }} 
-	<span><ion-icon name="ios-podium"></ion-icon>Word Count: {{ .WordCount }}&nbsp;&nbsp; | 
-	  <ion-icon name="ios-time"></ion-icon> Reading Time: {{ .ReadingTime }} Minute&nbsp;&nbsp;</span>
-      </p>
+                    <h3><a class="title_a" href="{{$url}}">{{ .Title }}</a></h3>
+                    <p> <span class="badge" time="{{.Date.Format " 2006-01-02 "}}"> {{.Date.Format "2006-01-02"}}</span>
+                    </p>
+                    <p>
+                        {{ with .Params.categories }}
+                        <ion-icon name="folder"></ion-icon>
+                        {{ range . }}
+                        <a class="btn btn-default btn-xs text-capitalize" href="/categories/{{ . | urlize }}"> {{ .
+                            }}</a> {{ end }} | {{ end }}
+                        <span>
+                            <ion-icon name="ios-podium"></ion-icon>Word Count: {{ .WordCount }}&nbsp;&nbsp; |
+                            <ion-icon name="ios-time"></ion-icon> Reading Time: {{ .ReadingTime }} Minute&nbsp;&nbsp;
+                        </span>
+                    </p>
 
-      <p><a href="{{$url}}" class="title_a">  {{ .Summary | markdownify }}....</a></p>
-   {{ partial "post/tag/list" . }}
-	      	    
-	  </div>
-	  </div>
- {{ end }} 
-      {{ template "_internal/pagination.html" . }}
-      </div>
-	</div>
+                    <p><a href="{{$url}}" class="title_a"> {{ .Summary | markdownify }}....</a></p>
+                    {{ partial "post/tag/list" . }}
+
+                </div>
+            </div>
+            {{ end }} {{ template "_internal/pagination.html" . }}
+        </div>
+    </div>
     <!--- end post --->
-{{ end }}
+    {{ end }}
