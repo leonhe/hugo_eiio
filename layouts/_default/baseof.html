@@ -5,8 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
-  <meta name="Description" content="{{ .Site.Params.description }}">
-  <meta name="author"      content="{{ .Site.Params.author}} <{{ .Site.Params.email}}>">
+{{ if .IsHome }}
+  <meta name="description" content="{{ .Site.Params.description }}">
+{{ end }}
+  {{ if not .IsHome }}
+  <meta name="description" content="{{ .Summary | plainify | safeHTML }}">
+  {{ end }}
+
+  <meta name="author"      content="{{ .Site.Params.author}},{{ .Site.Params.email}}">
   <meta name="keywords"    content="{{ .Site.Params.keywords}}">
   <title>
     {{ if .IsHome }}
@@ -16,10 +22,15 @@
     {{ .Title }} - {{ .Site.Title }}
     {{ end }}
   </title>
-  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="Bookmark" href="/favicon.ico" />
   {{ if .Site.Params.securityPolicy }}
      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     {{ end }}
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="all">
   <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
@@ -30,7 +41,7 @@
   <script src="/js/bootstrap.min.js"></script>
  <script src="/js/holder.min.js" type='text/javascript'></script>
 <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
-  <script type="text/javascript">
+ <script type="text/javascript">
     $(document).ready(function() {
 	hljs.initHighlightingOnLoad();
 	$('pre code').each(function(i, block) {
@@ -43,15 +54,15 @@
   <link rel="canonical" href="{{ .Permalink }}">
   <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
    </head>
-   <body data-spy="scroll" data-target="#toc">
+   <body>
      {{ partial "nav" . }}
      <div class="jumbotron masthead" role="main">
        <div class="container">
 	 <div class="row">
  	   <div class="col-lg-10">
 	   {{ block "main" . }}
-      <!-- The part of the page that begins to differ between templates -->
-      {{ end }}
+	   <!-- The part of the page that begins to differ between templates -->
+	   {{ end }}
 	 </div>
 
 	 </div>

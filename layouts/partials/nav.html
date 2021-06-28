@@ -14,18 +14,22 @@
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
 	{{ $siteURL:= "/" | absLangURL }}
-	
-	<li {{ if eq $url $siteURL }} class="active"  {{end}} ><a href="/">Home</a></li>
-	<li {{ if eq .Title "Posts" }} class="active"  {{end}}> <a href="/post/" >Posts</a></li>
-	{{ range where site.RegularPages "Type" "in" site.Params.mainSections }}
-	{{ if isset .Params "title" }}
-	{{ $absURL:=.Permalink | absLangURL}}
-	<li {{ if eq $absURL $url }} class="active"  {{end}}> <a href="{{.Permalink}}" >{{.Title}}</a></li>
+	{{ range .Site.Menus.main }}
+	<li {{ if eq .URL $siteURL }} class="active"  {{end}} ><a href="{{.URL}}" rel="nofollow">{{.Name}}</a></li>
 	{{ end }}
-{{ end }}
-
-	{{ $absURL:=.Permalink | absLangURL}}
-	<li {{ if eq .Title "Tags" }} class="active"  {{end}}> <a href="/tags/" >Tags</a></li>
+	
+<!-- 	<li {{ if eq $url $siteURL }} class="active"  {{end}} ><a href="/">Home</a></li>
+ !-- 	<li {{ if eq .Title "Posts" }} class="active"  {{end}}> <a href="/post/" >Posts</a></li>
+ !-- 
+ !-- 	{{ range where site.RegularPages "Type" "in" site.Params.mainSections }}
+ !-- 	{{ if isset .Params "title" }}
+ !-- 	{{ $absURL:=.Permalink | absLangURL}}
+ !-- 	<li {{ if eq $absURL $url }} class="active"  {{end}}> <a href="{{.Permalink}}" >{{.Title}}</a></li>
+ !-- 	{{ end }}
+ !-- {{ end }}
+ !-- 
+ !-- 	{{ $absURL:=.Permalink | absLangURL}}
+ !-- 	<li {{ if eq .Title "Tags" }} class="active"  {{end}}> <a href="/tags/" >Tags</a></li> -->
       </ul>
     </nav>
 </header>
