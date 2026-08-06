@@ -35,7 +35,7 @@
         <span class="glyphicon glyphicon-list-alt"></span>&nbsp;<b>Posts</b>
     </div>
     <div class="panel-body">
-        {{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") }} {{ range $paginator.Pages }} {{ $url :=.Permalink }}
+        {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" (slice "post" "posts")) }} {{ range $paginator.Pages }} {{ $url :=.Permalink }}
         <div id="home_post" class="row">
             {{ with .Param "header_images" }}
             <div class="col-md-3">
