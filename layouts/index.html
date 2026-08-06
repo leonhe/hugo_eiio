@@ -54,7 +54,7 @@
                     <p> <span class="badge" time="{{.Date.Format " 2006-01-02 "}}"> {{.Date.Format "2006-01-02"}}</span>
                     </p>
                     <p>
-                        {{ with .Params.categories }}
+                        {{ with partial "functions/as-list" .Params.categories }}
                         <ion-icon name="folder"></ion-icon>
                         {{ range . }}
                         <a class="btn btn-default btn-xs text-capitalize" href="/categories/{{ . | urlize }}"> {{ .

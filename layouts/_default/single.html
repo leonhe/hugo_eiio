@@ -19,7 +19,7 @@
 	  {{ if eq .Section "post" }}
 	  	  <div class="tags">	
 
-	      {{ with .Params.categories }}
+	      {{ with partial "functions/as-list" .Params.categories }}
 	    <p class="categories">
 	      <ion-icon name="folder"></ion-icon>
 	      {{ range . }}
@@ -87,7 +87,7 @@
 </script>
 <div id="remark42"></div>
 {{ end }}
-{{ if .Site.DisqusShortname }}
+{{ if .Site.Config.Services.Disqus.Shortname }}
 {{ template "_internal/disqus.html" . }}
 {{ end }}
 

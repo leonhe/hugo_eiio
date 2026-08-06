@@ -1,0 +1,13 @@
+{{ $list := . }}
+{{ if not (reflect.IsSlice $list) }}
+  {{ if $list }}
+    {{ if strings.Contains $list "," }}
+      {{ $list = apply (split $list ",") "strings.TrimSpace" "." }}
+    {{ else }}
+      {{ $list = split $list " " }}
+    {{ end }}
+  {{ else }}
+    {{ $list = slice }}
+  {{ end }}
+{{ end }}
+{{ return $list }}
